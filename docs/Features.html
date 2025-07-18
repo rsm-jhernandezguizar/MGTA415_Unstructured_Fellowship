@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dungeons &amp; Dragons AI Assistant</title>
+<title>Features – Dungeons &amp; Dragons AI Assistant</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ff4371ef257df69894857e99c6ad0d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -88,11 +89,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text"><i class="bi bi-house"></i> Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Features.html"> 
+    <a class="nav-link active" href="./Features.html" aria-current="page"> 
 <span class="menu-text"><i class="bi bi-newspaper"></i> TBD 1</span></a>
   </li>  
   <li class="nav-item">
@@ -110,125 +111,37 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-  <ul>
-  <li><a href="#what-does-it-do" id="toc-what-does-it-do" class="nav-link active" data-scroll-target="#what-does-it-do">✨ What Does It Do?</a></li>
-  <li><a href="#current-feature-set" id="toc-current-feature-set" class="nav-link" data-scroll-target="#current-feature-set">🧰 Current Feature Set</a></li>
-  <li><a href="#roadmap-snapshot" id="toc-roadmap-snapshot" class="nav-link" data-scroll-target="#roadmap-snapshot">📅 Roadmap Snapshot</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="images/minimalist-dungeons-and-dragons-party.jpg" class="about-image
-  rounded " style="width: 20em;">
+<main class="content" id="quarto-document-content">
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dungeons &amp; Dragons AI Assistant</h1>
+<h1 class="title">Features</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
+  
+
+
 </header>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-
-<p><strong>A web-based AI assistant for Dungeons &amp; Dragons</strong><br>
-<em>Work-in-Progress — turning prep time into play time.</em></p>
-<hr>
-<section id="what-does-it-do" class="level2">
-<h2 data-anchor-id="what-does-it-do">✨ What Does It Do?</h2>
-<p>The <strong>D&amp;D AI Assistant</strong> is a Python-powered chatbot that helps Dungeon Masters run streamlined sessions.<br>
-Ask rules questions, roll dice, spawn NPCs, track combat, and even push tokens to your favorite VTT — all from one interface.</p>
-<hr>
-</section>
-<section id="current-feature-set" class="level2">
-<h2 data-anchor-id="current-feature-set">🧰 Current Feature Set</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 27%">
-<col style="width: 27%">
-<col style="width: 44%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Module</th>
-<th>Status</th>
-<th>Quick blurb</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>🎲 <strong>Dice Roller</strong></td>
-<td>✅</td>
-<td>Parses <code>2d20kh1 + 5</code>, advantage/disadvantage, and groups.</td>
-</tr>
-<tr class="even">
-<td>🔮 <strong>Spellbook Lookup</strong></td>
-<td>✅</td>
-<td>Instant SRD spell text, upcasting notes, and class filters.</td>
-</tr>
-<tr class="odd">
-<td>👤 <strong>Character &amp; NPC Generator</strong></td>
-<td>🔄 Alpha</td>
-<td>One-click PCs or flavorful NPCs with quirks and stat blocks.</td>
-</tr>
-<tr class="even">
-<td>⚔️ <strong>Initiative Tracker</strong></td>
-<td>🏗️ Planned</td>
-<td>Auto-sorted turns, HP bars, and condition badges.</td>
-</tr>
-<tr class="odd">
-<td>🗺️ <strong>Map &amp; Token Manager</strong></td>
-<td>🏗️ Planned</td>
-<td>Grid movement, fog-of-war, and VTT sync.</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="roadmap-snapshot" class="level2">
-<h2 data-anchor-id="roadmap-snapshot">📅 Roadmap Snapshot</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: right;">Phase</th>
-<th>Focus</th>
-<th>Target</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;"><strong>1</strong></td>
-<td>Core foundations (dice, SRD data, LLM plumbing)</td>
-<td><strong>Done</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;"><strong>2</strong></td>
-<td>Game modules (spells, characters, NPCs)</td>
-<td><em>In progress</em></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;"><strong>3</strong></td>
-<td>Memory + polished UI (Streamlit / Textual)</td>
-<td>Aug 2025</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;"><strong>4</strong></td>
-<td>Combat tracker, maps, VTT integration</td>
-<td>Sep 2025</td>
-</tr>
-</tbody>
-</table>
-<p>Detailed milestones live under <strong>Roadmap 📅</strong>.</p>
 
 
-</section>
-</main></div>
-</div>
- <!-- /main -->
+<p><em>Last updated: 2025-04-05</em></p>
+<p><object data="resume_files/juan_hernandez_resume.pdf" type="application/pdf" width="100%" height="800"><a href="resume_files/juan_hernandez_resume.pdf" download="">Download PDF file.</a></object></p>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -249,6 +162,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

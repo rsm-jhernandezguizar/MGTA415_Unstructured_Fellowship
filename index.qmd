@@ -38,9 +38,9 @@ Ask rules questions, roll dice, spawn NPCs, track combat, and even push tokens t
 
 | Phase | Focus | Target |
 |------:|-------|-------|
-| **1** | Core foundations (dice, SRD data, LLM plumbing) | **Done** |
+| **1** | Core foundations (dice, SRD data, LLM plumbing) | *In progress* |
 | **2** | Game modules (spells, characters, NPCs) | *In progress* |
-| **3** | Memory + polished UI (Streamlit / Textual) | Aug 2025 |
-| **4** | Combat tracker, maps, VTT integration | Sep 2025 |
+| **3** | Memory + polished UI (Streamlit / Textual) | *In progress* |
+| **4** | Combat tracker, maps, VTT integration | *In progress* |
 
 Detailed milestones live under **Roadmap 📅**.
