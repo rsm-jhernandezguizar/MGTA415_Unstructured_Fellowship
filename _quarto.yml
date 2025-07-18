@@ -9,9 +9,9 @@ website:
     left:
       - href: index.qmd
         text: '<i class="bi bi-house"></i> Home'
-      - href: TBD 1.qmd
+      - href: Features.qmd
         text: '<i class="bi bi-newspaper"></i> TBD 1'
-      - href: TBD 2.qmd
+      - href: Roadmap.qmd
         text: '<i class="bi bi-pencil"></i> TBD 2'
 
 format:
