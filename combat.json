@@ -1,0 +1,105 @@
+{
+  "turn_structure": {
+    "description": "Each combat round lasts 6 seconds. On your turn, you can move and take one action. You may also perform a bonus action or reaction if a feature allows it."
+  },
+  "movement": {
+    "rules": [
+      "You don't have to move on your turn.",
+      "Your total movement cannot exceed your speed.",
+      "You can move before or after taking an action, or split movement around actions.",
+      "Movement includes walking, jumping, climbing, and other reasonable methods."
+    ]
+  },
+  "actions": {
+    "rules": [
+      "You may take one action on your turn.",
+      "You don't have to take an action.",
+      "Common actions include attacking, casting a spell, and using an object.",
+      "If you can make multiple attacks, you can move between attacks if speed allows."
+    ]
+  },
+  "bonus_actions": {
+    "description": "Some abilities, spells, or features allow an additional action called a bonus action.",
+    "rules": [
+      "Only one bonus action is allowed per round.",
+      "Example: Dual-wielding allows an off-hand attack as a bonus action."
+    ]
+  },
+  "reactions": {
+    "description": "A special action triggered by a specific event, usable once per round.",
+    "rules": [
+      "Can occur during another creature\u2019s turn.",
+      "Examples include: casting Feather Fall when falling, or making an opportunity attack when a creature moves out of your reach."
+    ]
+  },
+  "other_activities": {
+    "interact_with_object": [
+      "Draw or sheath a weapon",
+      "Load a crossbow",
+      "Pick up an item",
+      "Open a chest or door"
+    ],
+    "free_activities": [
+      "Drop an item within 5 feet",
+      "Drop prone (costs no movement)",
+      "Speak briefly",
+      "Draw ammunition for a ranged weapon"
+    ]
+  },
+  "combat_actions": {
+    "attack": {
+      "description": "Make one melee or ranged attack. Features may allow more."
+    },
+    "cast_spell": {
+      "description": "Cast a spell that has a casting time of one action."
+    },
+    "dash": {
+      "description": "Move up to twice your speed (double movement)."
+    },
+    "disengage": {
+      "description": "Move without provoking opportunity attacks."
+    },
+    "dodge": {
+      "description": "Until your next turn, attackers have disadvantage and you have advantage on Dexterity saves."
+    },
+    "help": {
+      "description": "Grant an ally advantage on an attack against a creature within 5 feet or assist with a task."
+    },
+    "use_object": {
+      "description": "Use or manipulate an object beyond free interaction (e.g., drinking a potion)."
+    },
+    "ready": {
+      "description": "Choose a trigger and prepare an action or spell as a reaction. Requires concentration for spells."
+    },
+    "hide": {
+      "description": "Make a Dexterity (Stealth) check to become hidden."
+    },
+    "search": {
+      "description": "Look for something hidden, using Wisdom or Intelligence as required by the DM."
+    },
+    "improvise": {
+      "description": "Attempt a creative or unusual action outside the standard options. May require DM approval and checks."
+    }
+  },
+  "special_rules": {
+    "readied_action": {
+      "rules": [
+        "You must declare a specific triggering event and the action you'll take.",
+        "The readied action becomes a reaction.",
+        "Only one reaction per round \u2014 using it for the readied action replaces any other reaction.",
+        "You must concentrate if the readied action is a spell."
+      ]
+    },
+    "improvised_action": {
+      "rules": [
+        "Requires DM approval.",
+        "May involve a check with a difficulty class.",
+        "Examples: jumping on a creature or swinging from a chandelier.",
+        "Failure could lead to consequences like falling prone or losing movement."
+      ]
+    },
+    "surprise": {
+      "description": "If surprised at the start of combat, you lose your first turn, including reactions, until round two."
+    }
+  }
+}

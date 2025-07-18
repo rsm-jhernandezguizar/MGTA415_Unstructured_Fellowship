@@ -1,0 +1,456 @@
+[
+  {
+    "name": "Acid (flask)",
+    "type": "thrown",
+    "cost": "25 gp",
+    "damage": "2d6",
+    "range": "20/60 ft.",
+    "weight": "1 lb.",
+    "properties": [
+      "thrown"
+    ]
+  },
+  {
+    "name": "Alchemist's Fire (flask)",
+    "type": "thrown",
+    "cost": "50 gp",
+    "damage": "d4",
+    "range": "20/60 ft.",
+    "weight": "1 lb.",
+    "properties": [
+      "thrown",
+      "d4/round",
+      "DEX save DC 10 to extinguish"
+    ]
+  },
+  {
+    "name": "Axe, Hand",
+    "type": "Martial",
+    "cost": "5 gp",
+    "damage": "d6",
+    "range": "20/60 ft.",
+    "weight": "5 lb.",
+    "properties": [
+      "light",
+      "thrown"
+    ]
+  },
+  {
+    "name": "Axe, Battle",
+    "type": "Martial",
+    "cost": "10 gp",
+    "damage": "d8",
+    "range": "-",
+    "weight": "4 lb.",
+    "properties": [
+      "versatile (d10)"
+    ]
+  },
+  {
+    "name": "Bow, Short",
+    "type": "Simple",
+    "cost": "25 gp",
+    "damage": "d6",
+    "range": "80/320 ft.",
+    "weight": "2 lb.",
+    "properties": [
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Dagger",
+    "type": "Simple",
+    "cost": "2 gp",
+    "damage": "d4",
+    "range": "20/60 ft.",
+    "weight": "1 lb.",
+    "properties": [
+      "finesse",
+      "light",
+      "thrown"
+    ]
+  },
+  {
+    "name": "Sword, Long",
+    "type": "Martial",
+    "cost": "15 gp",
+    "damage": "d8",
+    "range": "-",
+    "weight": "3 lb.",
+    "properties": [
+      "versatile (d10)",
+      "common"
+    ]
+  },
+  {
+    "name": "Sword, Great",
+    "type": "Martial",
+    "cost": "50 gp",
+    "damage": "2d6",
+    "range": "-",
+    "weight": "6 lb.",
+    "properties": [
+      "heavy",
+      "two-handed",
+      "Brutal: 3"
+    ]
+  },
+  {
+    "name": "Hammer, War",
+    "type": "Martial",
+    "cost": "15 gp",
+    "damage": "d8",
+    "range": "-",
+    "weight": "8 lb.",
+    "properties": [
+      "versatile (d10)"
+    ]
+  },
+  {
+    "name": "Javelin",
+    "type": "Simple",
+    "cost": "5 sp",
+    "damage": "d6",
+    "range": "30/120 ft.",
+    "weight": "2 lb.",
+    "properties": [
+      "thrown"
+    ]
+  },
+  {
+    "name": "Mace",
+    "type": "Simple",
+    "cost": "5 gp",
+    "damage": "d6",
+    "range": "-",
+    "weight": "4 lb.",
+    "properties": []
+  },
+  {
+    "name": "Quarterstaff",
+    "type": "Simple",
+    "cost": "2 sp",
+    "damage": "d6",
+    "range": "-",
+    "weight": "4 lb.",
+    "properties": [
+      "versatile (d8)"
+    ]
+  },
+  {
+    "name": "Sickle",
+    "type": "Simple",
+    "cost": "1 gp",
+    "damage": "d4",
+    "range": "-",
+    "weight": "2 lb.",
+    "properties": [
+      "light"
+    ]
+  },
+  {
+    "name": "Sling",
+    "type": "Simple",
+    "cost": "1 sp",
+    "damage": "d4",
+    "range": "30/120 ft.",
+    "weight": "0.5 lb.",
+    "properties": []
+  },
+  {
+    "name": "Spear",
+    "type": "Simple",
+    "cost": "1 gp",
+    "damage": "d6",
+    "range": "20/60 ft.",
+    "weight": "3 lb.",
+    "properties": [
+      "versatile (d8)"
+    ]
+  },
+  {
+    "name": "Trident",
+    "type": "Martial",
+    "cost": "15 gp",
+    "damage": "d6",
+    "range": "20/60 ft.",
+    "weight": "5 lb.",
+    "properties": [
+      "versatile (d8)",
+      "Brutal: 1"
+    ]
+  },
+  {
+    "name": "Whip",
+    "type": "Exotic",
+    "cost": "2 gp",
+    "damage": "d4",
+    "range": "-",
+    "weight": "2 lb.",
+    "properties": [
+      "finesse",
+      "light",
+      "reach",
+      "foe DEX save DC:12 to grapple/trip"
+    ]
+  },
+  {
+    "name": "Axe, Great",
+    "type": "Martial",
+    "cost": "30 gp",
+    "damage": "d12",
+    "range": "-",
+    "weight": "7 lb.",
+    "properties": [
+      "heavy",
+      "two-handed",
+      "Brutal: 1"
+    ]
+  },
+  {
+    "name": "Axe, Dwarven War",
+    "type": "Exotic",
+    "cost": "50 gp",
+    "damage": "d10",
+    "range": "-",
+    "weight": "10 lb.",
+    "properties": [
+      "heavy",
+      "versatile (d12)",
+      "Brutal: 1",
+      "dwarf can use as a martial weapon"
+    ]
+  },
+  {
+    "name": "Bow, Long",
+    "type": "Martial",
+    "cost": "50 gp",
+    "damage": "d8",
+    "range": "150/600 ft.",
+    "weight": "2 lb.",
+    "properties": [
+      "heavy",
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Bow, Short Composite",
+    "type": "Simple",
+    "cost": "75 gp",
+    "damage": "d6",
+    "range": "80/320 ft.",
+    "weight": "2 lb.",
+    "properties": [
+      "two-handed",
+      "DEX to hit",
+      "STR for damage"
+    ]
+  },
+  {
+    "name": "Crossbow, Light",
+    "type": "Simple",
+    "cost": "25 gp",
+    "damage": "d8",
+    "range": "80/320 ft.",
+    "weight": "5 lb.",
+    "properties": [
+      "loading",
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Crossbow, Heavy",
+    "type": "Simple",
+    "cost": "50 gp",
+    "damage": "d10",
+    "range": "100/400 ft.",
+    "weight": "18 lb.",
+    "properties": [
+      "loading",
+      "heavy",
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Firearm, Musket",
+    "type": "Exotic",
+    "cost": "800 gp",
+    "damage": "d12",
+    "range": "150/500 ft.",
+    "weight": "12 lb.",
+    "properties": [
+      "loading",
+      "heavy",
+      "two-handed",
+      "Progressive Damage: 11\u201312"
+    ]
+  },
+  {
+    "name": "Hammer, Maul",
+    "type": "Martial",
+    "cost": "15 gp",
+    "damage": "d12",
+    "range": "-",
+    "weight": "20 lb.",
+    "properties": [
+      "heavy",
+      "two-handed",
+      "Brutal: 1"
+    ]
+  },
+  {
+    "name": "Halberd",
+    "type": "Martial",
+    "cost": "20 gp",
+    "damage": "d10",
+    "range": "-",
+    "weight": "6 lb.",
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed",
+      "Brutal: 1"
+    ]
+  },
+  {
+    "name": "Trident",
+    "type": "Martial",
+    "cost": "15 gp",
+    "damage": "d6",
+    "range": "20/60 ft.",
+    "weight": "5 lb.",
+    "properties": [
+      "versatile (d8)",
+      "Brutal: 1"
+    ]
+  },
+  {
+    "name": "Sword, Katana",
+    "type": "Exotic",
+    "cost": "200 gp",
+    "damage": "d10",
+    "range": "-",
+    "weight": "8 lb.",
+    "properties": [
+      "finesse",
+      "versatile (d12)",
+      "Brutal: 2"
+    ]
+  },
+  {
+    "name": "Sword, Mercurial Great",
+    "type": "Exotic",
+    "cost": "1200 gp",
+    "damage": "3d6",
+    "range": "-",
+    "weight": "17 lb.",
+    "properties": [
+      "heavy",
+      "two-handed",
+      "Brutal: 4",
+      "mercury flows inside the blade"
+    ]
+  },
+  {
+    "name": "Sword, Short",
+    "type": "Martial",
+    "cost": "10 gp",
+    "damage": "d6",
+    "range": "-",
+    "weight": "2 lb.",
+    "properties": [
+      "finesse",
+      "light",
+      "includes Gladius"
+    ]
+  },
+  {
+    "name": "Sword, Broad",
+    "type": "Martial",
+    "cost": "12 gp",
+    "damage": "d8",
+    "range": "-",
+    "weight": "5 lb.",
+    "properties": [
+      "versatile (d10)"
+    ]
+  },
+  {
+    "name": "Sword, Scimitar",
+    "type": "Martial",
+    "cost": "25 gp",
+    "damage": "d6",
+    "range": "-",
+    "weight": "3 lb.",
+    "properties": [
+      "finesse",
+      "light",
+      "includes Cutlass"
+    ]
+  },
+  {
+    "name": "Sword, Rapier",
+    "type": "Martial",
+    "cost": "25 gp",
+    "damage": "d8",
+    "range": "-",
+    "weight": "2 lb.",
+    "properties": [
+      "finesse",
+      "includes Saber"
+    ]
+  },
+  {
+    "name": "Sword, Two Handed",
+    "type": "Martial",
+    "cost": "25 gp",
+    "damage": "d12",
+    "range": "-",
+    "weight": "10 lb.",
+    "properties": [
+      "heavy",
+      "two-handed",
+      "Brutal: 1"
+    ]
+  },
+  {
+    "name": "Sword, Bastard",
+    "type": "Exotic",
+    "cost": "35 gp",
+    "damage": "d10",
+    "range": "-",
+    "weight": "10 lb.",
+    "properties": [
+      "heavy",
+      "versatile (d12)",
+      "Brutal: 1",
+      "also called Hand & Half sword"
+    ]
+  },
+  {
+    "name": "Whip",
+    "type": "Exotic",
+    "cost": "2 gp",
+    "damage": "d4",
+    "range": "-",
+    "weight": "2 lb.",
+    "properties": [
+      "finesse",
+      "light",
+      "reach",
+      "foe DEX save DC:12 to be grabbed or tripped (no damage)"
+    ]
+  },
+  {
+    "name": "Trident",
+    "type": "Martial",
+    "cost": "15 gp",
+    "damage": "d6",
+    "range": "20/60 ft.",
+    "weight": "5 lb.",
+    "properties": [
+      "versatile (d8)",
+      "Brutal: 1"
+    ]
+  }
+]
