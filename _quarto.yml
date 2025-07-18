@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Dungeons & Dragons AI Assistant"
+  description: "A web-based AI assistant for Dungeons & Dragons"
+  navbar:
+    left:
+      - href: index.qmd
+        text: '<i class="bi bi-house"></i> Home'
+      - href: TBD 1.qmd
+        text: '<i class="bi bi-newspaper"></i> TBD 1'
+      - href: TBD 2.qmd
+        text: '<i class="bi bi-pencil"></i> TBD 2'
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    includes:
+      in-header: bootstrap-icons.html
+    # code-overflow: wrap   # fuerza el ‹wrap› en TODO el HTML
+    code-width: 80  # 80 caracteres antes de envolver
+
+format-options:
+  editor:
+    format-on-save: false

@@ -1,0 +1,16 @@
+---
+title: "Dungeons & Dragons AI Assistant"
+# image: "images/Professional Picture Option 1.jpg"
+image: "images/minimalist-dungeons-and-dragons-party.jpg"
+about:
+  template: trestles
+#  links:
+#    - icon: envelope
+#      href: mailto:jhernandezguizar@ucsd.edu
+#    - icon: linkedin
+#      href: https://www.linkedin.com/in/juancarloshernandez8b7/
+---
+
+**A web-based AI assistant for Dungeons & Dragons** Work in Progress 
+
+## More coming soon

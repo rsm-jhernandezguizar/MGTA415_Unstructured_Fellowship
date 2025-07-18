@@ -1,0 +1,11 @@
+---
+title: "TBD 2"
+# listing:
+#   contents: TBD 2
+#   type: default
+#   sort: "date desc"
+#   categories: false
+#   fields: [image, title, description, date, author]
+#   image-align: left
+#   page-size: 10
+---
