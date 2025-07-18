@@ -1,6 +1,5 @@
 ---
 title: "Dungeons & Dragons AI Assistant"
-# image: "images/Professional Picture Option 1.jpg"
 image: "images/minimalist-dungeons-and-dragons-party.jpg"
 about:
   template: trestles
@@ -11,6 +10,37 @@ about:
 #      href: https://www.linkedin.com/in/juancarloshernandez8b7/
 ---
 
-**A web-based AI assistant for Dungeons & Dragons** Work in Progress 
+**A web-based AI assistant for Dungeons & Dragons**  
+*Work-in-Progress — turning prep time into play time.*
 
-## More coming soon
+---
+
+## ✨ What Does It Do?
+
+The **D&D AI Assistant** is a Python-powered chatbot that helps Dungeon Masters run streamlined sessions.  
+Ask rules questions, roll dice, spawn NPCs, track combat, and even push tokens to your favorite VTT — all from one interface.
+
+---
+
+## 🧰 Current Feature Set
+
+| Module | Status | Quick blurb |
+|--------|--------|-------------|
+| 🎲 **Dice Roller** | ✅ | Parses `2d20kh1 + 5`, advantage/disadvantage, and groups. |
+| 🔮 **Spellbook Lookup** | ✅ | Instant SRD spell text, upcasting notes, and class filters. |
+| 👤 **Character & NPC Generator** | 🔄 Alpha | One-click PCs or flavorful NPCs with quirks and stat blocks. |
+| ⚔️ **Initiative Tracker** | 🏗️ Planned | Auto-sorted turns, HP bars, and condition badges. |
+| 🗺️ **Map & Token Manager** | 🏗️ Planned | Grid movement, fog-of-war, and VTT sync. |
+
+---
+
+## 📅 Roadmap Snapshot
+
+| Phase | Focus | Target |
+|------:|-------|-------|
+| **1** | Core foundations (dice, SRD data, LLM plumbing) | **Done** |
+| **2** | Game modules (spells, characters, NPCs) | *In progress* |
+| **3** | Memory + polished UI (Streamlit / Textual) | Aug 2025 |
+| **4** | Combat tracker, maps, VTT integration | Sep 2025 |
+
+Detailed milestones live under **Roadmap 📅**.
