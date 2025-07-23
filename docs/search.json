@@ -7,20 +7,6 @@
     "text": "A web-based AI assistant for Dungeons & Dragons\nWork-in-Progress — turning prep time into play time."
   },
   {
-    "objectID": "index.html#more-coming-soon",
-    "href": "index.html#more-coming-soon",
-    "title": "Dungeons & Dragons AI Assistant",
-    "section": "More coming soon",
-    "text": "More coming soon"
-  },
-  {
-    "objectID": "TBD 1.html",
-    "href": "TBD 1.html",
-    "title": "TBD",
-    "section": "",
-    "text": "Last updated: 2025-04-05\nDownload PDF file."
-  },
-  {
     "objectID": "index.html#what-does-it-do",
     "href": "index.html#what-does-it-do",
     "title": "Dungeons & Dragons AI Assistant",
@@ -28,24 +14,24 @@
     "text": "✨ What Does It Do?\nThe D&D AI Assistant is a Python-powered chatbot that helps Dungeon Masters run streamlined sessions.\nAsk rules questions, roll dice, spawn NPCs, track combat, and even push tokens to your favorite VTT — all from one interface."
   },
   {
-    "objectID": "index.html#current-feature-set",
-    "href": "index.html#current-feature-set",
-    "title": "Dungeons & Dragons AI Assistant",
-    "section": "🧰 Current Feature Set",
-    "text": "🧰 Current Feature Set\n\n\n\n\n\n\n\n\nModule\nStatus\nQuick blurb\n\n\n\n\n🎲 Dice Roller\n✅\nParses 2d20kh1 + 5, advantage/disadvantage, and groups.\n\n\n🔮 Spellbook Lookup\n✅\nInstant SRD spell text, upcasting notes, and class filters.\n\n\n👤 Character & NPC Generator\n🔄 Alpha\nOne-click PCs or flavorful NPCs with quirks and stat blocks.\n\n\n⚔️ Initiative Tracker\n🏗️ Planned\nAuto-sorted turns, HP bars, and condition badges.\n\n\n🗺️ Map & Token Manager\n🏗️ Planned\nGrid movement, fog-of-war, and VTT sync."
-  },
-  {
     "objectID": "index.html#roadmap-snapshot",
     "href": "index.html#roadmap-snapshot",
     "title": "Dungeons & Dragons AI Assistant",
     "section": "📅 Roadmap Snapshot",
-    "text": "📅 Roadmap Snapshot\n\n\n\nPhase\nFocus\nTarget\n\n\n\n\n1\nCore foundations (dice, SRD data, LLM plumbing)\nDone\n\n\n2\nGame modules (spells, characters, NPCs)\nIn progress\n\n\n3\nMemory + polished UI (Streamlit / Textual)\nAug 2025\n\n\n4\nCombat tracker, maps, VTT integration\nSep 2025\n\n\n\nDetailed milestones live under Roadmap 📅."
+    "text": "📅 Roadmap Snapshot\n\n\n\n\n\n\n\n\nPhase\nFocus\nTarget\n\n\n\n\n1\nCore foundations (dice, SRD data, LLM plumbing)\nIn progress\n\n\n2\nGame modules (spells, characters, NPCs)\nIn progress\n\n\n3\nMemory + polished UI (Streamlit / Textual)\nIn progress\n\n\n4\nCombat tracker, maps, VTT integration\nIn progress\n\n\n\nDetailed milestones live under Roadmap 📅."
   },
   {
-    "objectID": "Features.html",
-    "href": "Features.html",
-    "title": "Features",
+    "objectID": "D&D Chat Bot.html",
+    "href": "D&D Chat Bot.html",
+    "title": "D&D Chat Bot",
     "section": "",
-    "text": "Last updated: 2025-04-05\nDownload PDF file."
+    "text": "Chat Bot Coming :)"
+  },
+  {
+    "objectID": "Roadmap.html",
+    "href": "Roadmap.html",
+    "title": "Roadmap",
+    "section": "",
+    "text": "Roadmap Comoing soon :)"
   }
 ]

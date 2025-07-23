@@ -22,18 +22,6 @@ Ask rules questions, roll dice, spawn NPCs, track combat, and even push tokens t
 
 ---
 
-## 🧰 Current Feature Set
-
-| Module | Status | Quick blurb |
-|--------|--------|-------------|
-| 🎲 **Dice Roller** | ✅ | Parses `2d20kh1 + 5`, advantage/disadvantage, and groups. |
-| 🔮 **Spellbook Lookup** | ✅ | Instant SRD spell text, upcasting notes, and class filters. |
-| 👤 **Character & NPC Generator** | 🔄 Alpha | One-click PCs or flavorful NPCs with quirks and stat blocks. |
-| ⚔️ **Initiative Tracker** | 🏗️ Planned | Auto-sorted turns, HP bars, and condition badges. |
-| 🗺️ **Map & Token Manager** | 🏗️ Planned | Grid movement, fog-of-war, and VTT sync. |
-
----
-
 ## 📅 Roadmap Snapshot
 
 | Phase | Focus | Target |
