@@ -23,9 +23,9 @@
   {
     "objectID": "D&D Chat Bot.html",
     "href": "D&D Chat Bot.html",
-    "title": "D&D Chat Bot",
+    "title": "LLM Chat Assistant",
     "section": "",
-    "text": "Chat Bot Coming :)"
+    "text": "Why this works: the &lt;script&gt; registers the custom element, and &lt;gradio-app&gt; streams the Space into your page — no iframes, no width/height fiddling. Hugging Face’s docs recommend exactly this pattern. oai_citation:0‡Hugging Face oai_citation:1‡gradio.app"
   },
   {
     "objectID": "Roadmap.html",
@@ -33,5 +33,12 @@
     "title": "Roadmap",
     "section": "",
     "text": "Roadmap Comoing soon :)"
+  },
+  {
+    "objectID": "D&D Chat Bot.html#optionally-float-it-like-a-real-chat-bubble",
+    "href": "D&D Chat Bot.html#optionally-float-it-like-a-real-chat-bubble",
+    "title": "LLM Chat Assistant",
+    "section": "3. (Optionally) float it like a real chat bubble",
+    "text": "3. (Optionally) float it like a real chat bubble\nIf you’d rather have a little circle in the corner that pops open (à la ChatGPT), drop the CSS + JS sample below instead of the single &lt;gradio-app&gt; tag.\nIt’s the official snippet from Gradio’s “Website Chat Widget” guide, already wired to your Space. oai_citation:2‡gradio.app\nqmd \n\n💬\n\n&lt;div id=\"chat-header\"&gt;\n  &lt;h3&gt;Gradio Assistant&lt;/h3&gt;\n  &lt;button id=\"close-chat\"&gt;×&lt;/button&gt;\n&lt;/div&gt;\n\n&lt;!-- Actual Space embed --&gt;\n&lt;gradio-app src=\"https://&lt;your-space&gt;.hf.space\"&gt;&lt;/gradio-app&gt;"
   }
 ]
