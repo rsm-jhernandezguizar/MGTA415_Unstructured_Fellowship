@@ -24,8 +24,9 @@
     "objectID": "D&D Chat Bot.html",
     "href": "D&D Chat Bot.html",
     "title": "LLM Chat Assistant",
+    "title": "LLM Chat Assistant",
     "section": "",
-    "text": "Why this works: the &lt;script&gt; registers the custom element, and &lt;gradio-app&gt; streams the Space into your page — no iframes, no width/height fiddling. Hugging Face’s docs recommend exactly this pattern. oai_citation:0‡Hugging Face oai_citation:1‡gradio.app"
+    "text": "Why this works: the &lt;script&gt; registers the custom element, and &lt;gradio-app&gt; streams the Space into your page — no iframes, no width/height fiddling. Hugging Face’s docs recommend exactly this pattern. oai_citation:0‡Hugging Face oai_citation:1‡gradio.app""text": "Why this works: the &lt;script&gt; registers the custom element, and &lt;gradio-app&gt; streams the Space into your page — no iframes, no width/height fiddling. Hugging Face’s docs recommend exactly this pattern. oai_citation:0‡Hugging Face oai_citation:1‡gradio.app"
   },
   {
     "objectID": "Roadmap.html",
