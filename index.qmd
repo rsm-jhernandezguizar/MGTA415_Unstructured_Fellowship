@@ -2,7 +2,7 @@
 title: "Dungeons & Dragons AI Assistant"
 image: "images/minimalist-dungeons-and-dragons-party.jpg"
 about:
-  template: trestles
+  template: jolla
 #  links:
 #    - icon: envelope
 #      href: mailto:jhernandezguizar@ucsd.edu
@@ -32,3 +32,13 @@ Ask rules questions, roll dice, spawn NPCs, track combat, and even push tokens t
 | **4** | Combat tracker, maps, VTT integration | *In progress* |
 
 Detailed milestones live under **Roadmap 📅**.
+
+## 🏗️ Architecture Overview
+
+The diagram below sketches the high‑level flow of data between components—in other words, who talks to whom when you ask the assistant anything you like. 🎲🚀
+
+![System architecture diagram](images/250726_Architecture.png){
+  fig-alt="High‑level system architecture for the D&D AI Assistant"
+  fig-cap="Figure&nbsp;2. Behind‑the‑scenes: how the assistant pieces fit together."
+  width=90%
+}
