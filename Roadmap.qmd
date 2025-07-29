@@ -11,3 +11,4 @@ title: "Roadmap"
 ---
 
 Caching coming soon :) 
+Having multiple agents and using a "think tank" to come up with the best answer rather than a voting schema
