@@ -4,53 +4,27 @@ format: html
 page-layout: full
 ---
 
-```{=html}
-<!-- 1️⃣  Pull in the lightweight Gradio web-component JS -->
-<script src="https://gradio.s3-us-west-2.amazonaws.com/4.44.1/gradio.js"></script>
 
-<!-- 2️⃣  Embed the Space as a web-component -->
-<gradio-app src="https://huggingface.co/spaces/jhernandezguizar/Unstructured_Fellowship"></gradio-app>
 
-Why this works: the `<script>` registers the custom element, and `<gradio-app>` streams the Space into your page — no iframes, no width/height fiddling. Hugging Face’s docs recommend exactly this pattern. [oai_citation:0‡Hugging Face](https://huggingface.co/docs/hub/spaces-embed?utm_source=chatgpt.com) [oai_citation:1‡gradio.app](https://www.gradio.app/guides/creating-a-website-widget-from-a-gradio-chatbot)
+```{python}
+#| echo: false
+#| eval: true
+import gradio as gr
 
----
+with gr.Blocks() as demo:
 
-## 3. (Optionally) float it like a real chat bubble
+    with gr.Tab("D&D Chat Bot"):
+        gr.HTML(
+            """
+            <iframe src="http://127.0.0.1:7860"
+                    width="100%" height="1000"
+                    loading="lazy"
+                    style="border:none;"></iframe>
+            """
+        )
 
-If you’d rather have a little circle in the corner that pops open (à la ChatGPT), drop the **CSS + JS** sample below instead of the single `<gradio-app>` tag.  
-It’s the official snippet from Gradio’s “Website Chat Widget” guide, already wired to your Space. [oai_citation:2‡gradio.app](https://www.gradio.app/guides/creating-a-website-widget-from-a-gradio-chatbot)
+demo.launch()
 
-```qmd
-```{=html}
-<!-- You can paste this whole block verbatim -->
-<div id="chat-widget" class="chat-widget">
-  <button id="chat-toggle" class="chat-toggle">💬</button>
 
-  <div id="chat-container" class="chat-container hidden">
-    <div id="chat-header">
-      <h3>Gradio Assistant</h3>
-      <button id="close-chat">×</button>
-    </div>
+```
 
-    <!-- Actual Space embed -->
-    <gradio-app src="https://<your-space>.hf.space"></gradio-app>
-  </div>
-</div>
-
-<style>
-/* miniature style sheet — tweak colours to match Blue Origin blues 🚀 */
-.chat-widget{position:fixed;bottom:20px;right:20px;z-index:1000}
-.chat-toggle{width:50px;height:50px;border-radius:50%;background:#007bff;border:none;color:#fff;font-size:24px;cursor:pointer}
-.chat-container{position:fixed;bottom:80px;right:20px;width:340px;height:500px;background:#fff;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.1);display:flex;flex-direction:column}
-.chat-container.hidden{display:none}
-#chat-header{padding:10px;background:#007bff;color:#fff;border-radius:10px 10px 0 0;display:flex;justify-content:space-between;align-items:center}
-gradio-app{flex:1 1 auto}
-</style>
-
-<script>
-/* one-liner “open/close” logic */
-document.getElementById('chat-toggle').onclick = () =>
-  document.getElementById('chat-container').classList.remove('hidden');
-document.getElementById('close-chat').onclick = () =>
-  document.getElementById('chat-container').classList.add('hidden');
-</script>

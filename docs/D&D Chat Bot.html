@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -67,6 +67,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -112,17 +115,11 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#optionally-float-it-like-a-real-chat-bubble" id="toc-optionally-float-it-like-a-real-chat-bubble" class="nav-link active" data-scroll-target="#optionally-float-it-like-a-real-chat-bubble">3. (Optionally) float it like a real chat bubble</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -131,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -143,48 +140,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- 1️⃣  Pull in the lightweight Gradio web-component JS -->
-<script src="https://gradio.s3-us-west-2.amazonaws.com/4.44.1/gradio.js"></script>
-<!-- 2️⃣  Embed the Space as a web-component -->
-<p><gradio-app src="https://huggingface.co/spaces/jhernandezguizar/Unstructured_Fellowship"></gradio-app></p>
-<p>Why this works: the <code>&lt;script&gt;</code> registers the custom element, and <code>&lt;gradio-app&gt;</code> streams the Space into your page — no iframes, no width/height fiddling. Hugging Face’s docs recommend exactly this pattern. <a href="https://huggingface.co/docs/hub/spaces-embed?utm_source=chatgpt.com">oai_citation:0‡Hugging Face</a> <a href="https://www.gradio.app/guides/creating-a-website-widget-from-a-gradio-chatbot">oai_citation:1‡gradio.app</a></p>
-<hr>
-<section id="optionally-float-it-like-a-real-chat-bubble" class="level2">
-<h2 class="anchored" data-anchor-id="optionally-float-it-like-a-real-chat-bubble">3. (Optionally) float it like a real chat bubble</h2>
-<p>If you’d rather have a little circle in the corner that pops open (à la ChatGPT), drop the <strong>CSS + JS</strong> sample below instead of the single <code>&lt;gradio-app&gt;</code> tag.<br>
-It’s the official snippet from Gradio’s “Website Chat Widget” guide, already wired to your Space. <a href="https://www.gradio.app/guides/creating-a-website-widget-from-a-gradio-chatbot">oai_citation:2‡gradio.app</a></p>
-qmd <!-- You can paste this whole block verbatim -->
-<div id="chat-widget" class="chat-widget">
-<p><button id="chat-toggle" class="chat-toggle">💬</button></p>
-<div id="chat-container" class="chat-container hidden">
-<pre><code>&lt;div id="chat-header"&gt;
-  &lt;h3&gt;Gradio Assistant&lt;/h3&gt;
-  &lt;button id="close-chat"&gt;×&lt;/button&gt;
-&lt;/div&gt;
-
-&lt;!-- Actual Space embed --&gt;
-&lt;gradio-app src="https://&lt;your-space&gt;.hf.space"&gt;&lt;/gradio-app&gt;</code></pre>
+<div id="dc2c23a6" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-stdout">
+<pre><code>* Running on local URL:  http://127.0.0.1:7861
+* To create a public link, set `share=True` in `launch()`.</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div><iframe src="http://127.0.0.1:7861/" width="100%" height="500" allow="autoplay; camera; microphone; clipboard-read; clipboard-write;" frameborder="0" allowfullscreen=""></iframe></div>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code></code></pre>
 </div>
 </div>
-<style>
-/* miniature style sheet — tweak colours to match Blue Origin blues 🚀 */
-.chat-widget{position:fixed;bottom:20px;right:20px;z-index:1000}
-.chat-toggle{width:50px;height:50px;border-radius:50%;background:#007bff;border:none;color:#fff;font-size:24px;cursor:pointer}
-.chat-container{position:fixed;bottom:80px;right:20px;width:340px;height:500px;background:#fff;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.1);display:flex;flex-direction:column}
-.chat-container.hidden{display:none}
-#chat-header{padding:10px;background:#007bff;color:#fff;border-radius:10px 10px 0 0;display:flex;justify-content:space-between;align-items:center}
-gradio-app{flex:1 1 auto}
-</style>
-<script>
-/* one-liner “open/close” logic */
-document.getElementById('chat-toggle').onclick = () =>
-  document.getElementById('chat-container').classList.remove('hidden');
-document.getElementById('close-chat').onclick = () =>
-  document.getElementById('chat-container').classList.add('hidden');
-</script>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

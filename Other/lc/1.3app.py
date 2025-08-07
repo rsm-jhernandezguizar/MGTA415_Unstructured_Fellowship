@@ -151,35 +151,25 @@ def answer(question: str, history=None):
 
     print("🧠 No cached match. Generating answer with LLM...")
     context = retrieve(question, k=1)
-    prompt = f"""You are a helpful assistant. 
-    Answer the question using only the context below. 
-    If the answer is not in the context, say you don't know. 
-    Ensure the answers don't have duplicate information.
-    When providing an answer:
-    - Ensure clarity and conciseness.
-    - If listing items (e.g., spells, weapons, races, features), return only **unique** items. Avoid duplicates or synonyms.
-    - Format your answer as a **numbered list** or **clear bullet points** if appropriate.
-    - Never invent facts outside the provided context.
+    prompt = f"""You are a helpful assistant and Dungeon Master in a high-fantasy tabletop world. 
+Your task is to classify and respond to the player's query using only the context provided below. 
+If the answer is not in the context, say you don't know. Do not invent facts. Avoid duplicate information.
 
-    You are a Dungeon Master guiding players through a high-fantasy tabletop role-playing game. You have access to private source data including maps, NPC backstories, world lore, secret quest logic, and random outcome rules. You use this source data to maintain a consistent, immersive world and adapt to player decisions.
+**Step 1 — Classify the query intent.** Choose the most likely category for this question:
+- "spell" — related to magic, casting, effects, durations, components
+- "weapon" — related to attacks, damage types, martial equipment
+- "feat" — character abilities, enhancements, bonuses
+- "class" — features of D&D character classes
+- "lore" — world-building, places, quests, NPCs, hidden knowledge
 
-You must respond in **structured JSON format** with the following fields:
+**Step 2 — Answer using only the retrieved context.**
+- Structure the output in JSON with the required fields.
+- Use vivid sensory detail in `narration`.
+- Keep `player_options` grounded in the situation.
+- Use `hidden_logic` for dice outcomes, passive checks, and event triggers.
+- Store meta or branching logic in `dm_notes`.
 
-
-  "narration": "A vivid, immersive description of what the player experiences based on their action or question.",
-  "player_options": "A list of clear, relevant actions the player might consider next.",
-  "hidden_logic": "Any behind-the-scenes interpretation, dice outcomes, or consequences that should NOT be shown to the player.",
-  "dm_notes": "Optional notes for the Dungeon Master (not shown to players) that track state, foreshadow, or suggest future branches."
-
-
-Guidelines:
-- Use rich sensory language in the `narration` to describe environments and NPCs.
-- Present `player_options` as concise, relevant next moves based on the situation.
-- Use `hidden_logic` to simulate dice rolls, resolve stealth, detect lies, determine outcomes, or trigger events. Keep this hidden from the player.
-- Use `dm_notes` to internally track ongoing threads, NPC states, quest flags, or emerging tension.
-
-Never break character or refer to the format directly. This structure is for backend use only and should feel seamless to the player.
-
+**Always begin by clearly stating the question type.**
 
     ### Context
     {context}
@@ -195,12 +185,12 @@ Never break character or refer to the format directly. This structure is for bac
     # Store in disk-based cache
     embedding = embedder.encode(question, convert_to_tensor=True)
     save_question_entry(question, final_answer, embedding)
-
+    print(prompt)
     return final_answer
 
 # ------------------------ Gradio Interface ------------------------
-chat = gr.ChatInterface(fn=answer, title="TinyLlama Chatbot 🦙")
-chat.launch()
+chat = gr.ChatInterface(fn=answer, title="🦙 🛡️🧙 ⚔️ TinyLlama Chatbot ⚔️🧙🛡️  🦙")
+chat.launch(server_port=7860)
 
 
 
