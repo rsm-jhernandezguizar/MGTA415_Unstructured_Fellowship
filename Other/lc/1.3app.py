@@ -1,3 +1,4 @@
+# !pip install sentence-transformers faiss-cpu gradio
 import gradio as gr
 from transformers import pipeline, AutoTokenizer
 from sentence_transformers import SentenceTransformer
@@ -39,7 +40,7 @@ else:
 
 # Build the FAISS index
 print("Building FAISS index...")
-index = faiss.IndexFlatL2(embs.shape[1])  # shape[1] = embedding dimension
+index = faiss.IndexFlatL2(embs.shape[1])  # shape[1] = embedding dimension 
 index.add(embs)
 
 print(f"Index is trained: {index.is_trained}")
@@ -92,7 +93,7 @@ def build_question_index():
 
 def retrieve(question: str, k: int = 2):
     q_emb = embedder.encode([question]).astype("float32")
-    D, I = index.search(q_emb, k)                # distances & indices
+    D, I = index.search(q_emb, k)                
     hits = [docs[i] for i in I[0]]
     return "\n\n".join(hits)
 
@@ -102,7 +103,7 @@ def retrieve(question: str, k: int = 2):
 
 from transformers import pipeline, AutoTokenizer
 
-model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"   # any small instruct model works
+model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"  
 tok  = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 llm  = pipeline("text-generation",
                 model=model_name,

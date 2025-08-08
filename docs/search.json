@@ -39,7 +39,7 @@
     "href": "D&D Chat Bot.html",
     "title": "LLM Chat Assistant",
     "section": "",
-    "text": "* Running on local URL:  http://127.0.0.1:7860\n* To create a public link, set `share=True` in `launch()`."
+    "text": "```"
   },
   {
     "objectID": "Roadmap.html",
