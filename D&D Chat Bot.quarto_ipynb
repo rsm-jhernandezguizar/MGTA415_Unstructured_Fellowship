@@ -10,7 +10,7 @@
         "page-layout: full\n",
         "---\n"
       ],
-      "id": "d9b828ce"
+      "id": "af6d8585"
     },
     {
       "cell_type": "code",
@@ -34,7 +34,7 @@
         "\n",
         "demo.launch()\n"
       ],
-      "id": "a5aed0ad",
+      "id": "b9f9ac6a",
       "execution_count": null,
       "outputs": []
     }
