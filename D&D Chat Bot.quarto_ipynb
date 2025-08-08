@@ -1,0 +1,52 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"LLM Chat Assistant\"\n",
+        "format: html\n",
+        "page-layout: full\n",
+        "---\n"
+      ],
+      "id": "d9b828ce"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| echo: false\n",
+        "#| eval: true\n",
+        "import gradio as gr\n",
+        "\n",
+        "with gr.Blocks() as demo:\n",
+        "\n",
+        "    with gr.Tab(\"D&D Chat Bot\"):\n",
+        "        gr.HTML(\n",
+        "            \"\"\"\n",
+        "            <iframe src=\"http://127.0.0.1:7860\"\n",
+        "                    width=\"100%\" height=\"1000\"\n",
+        "                    loading=\"lazy\"\n",
+        "                    style=\"border:none;\"></iframe>\n",
+        "            \"\"\"\n",
+        "        )\n",
+        "\n",
+        "demo.launch()\n"
+      ],
+      "id": "a5aed0ad",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/opt/conda/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

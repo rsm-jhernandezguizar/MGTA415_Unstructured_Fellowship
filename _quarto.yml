@@ -13,6 +13,8 @@ website:
         text: '<i class="bi bi-newspaper"></i> D&D Chat Bot'
       - href: Roadmap.qmd
         text: '<i class="bi bi-pencil"></i> Roadmap'
+      - href: Midterm.qmd
+        text: '<i class="bi bi-gear"></i> Midterm'
 
 format:
   html:
