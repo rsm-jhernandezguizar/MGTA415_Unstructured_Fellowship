@@ -25,8 +25,9 @@ Dungeons & Dragons (D&D) is a collaborative storytelling game where you and your
 
 ## Project Goal
 
-In 10 weeks create a light weight LLM chatbot that can be used to answer combat questions, spell descriptions and effects, NPC generation,
-character generation, and virtual dice rolling. 
+In 10 weeks create a light weight LLM chatbot that can be used to answer combat questions, spell descriptions and effects, NPC generation, character generation, and virtual dice rolling. 
+
+[Return to the Home Page to view our grand vision](index.qmd)
 
 ---
 

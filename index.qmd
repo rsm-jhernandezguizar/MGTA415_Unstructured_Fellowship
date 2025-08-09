@@ -11,7 +11,7 @@ about:
 ---
 
 **A web-based AI assistant for Dungeons & Dragons**  
-*Work-in-Progress — turning prep time into play time.*
+*Knowledge is Our Quest. Dungeons are Our Dataset.*
 
 ---
 

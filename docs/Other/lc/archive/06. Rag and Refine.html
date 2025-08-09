@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.7.5">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,9 +21,8 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -34,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -65,16 +64,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ff4371ef257df69894857e99c6ad0d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-ff4892edf4a7050d1342fad5826b0fcc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-f735cf07a6910d811a1cbb5bbbcb55bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -107,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -135,6 +133,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="../../../Roadmap.html"> 
 <span class="menu-text"><i class="bi bi-pencil"></i> Roadmap</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Midterm.html"> 
+<span class="menu-text"><i class="bi bi-gear"></i> Midterm</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -271,41 +273,169 @@ Classes: 716
 <div id="223888a2" class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f639ee47" class="cell" data-execution_count="23">
+<div id="f639ee47" class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># !pip install sentence-transformers faiss-cpu gradio</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">#INSTALL ME</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Collecting sentence-transformers
+  Downloading sentence_transformers-5.1.0-py3-none-any.whl.metadata (16 kB)
+Collecting faiss-cpu
+  Using cached faiss_cpu-1.11.0.post1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (5.0 kB)
+Collecting gradio
+  Downloading gradio-5.41.1-py3-none-any.whl.metadata (16 kB)
+Collecting transformers&lt;5.0.0,&gt;=4.41.0 (from sentence-transformers)
+  Downloading transformers-4.55.0-py3-none-any.whl.metadata (39 kB)
+Requirement already satisfied: tqdm in /opt/conda/lib/python3.12/site-packages (from sentence-transformers) (4.67.1)
+Collecting torch&gt;=1.11.0 (from sentence-transformers)
+  Downloading torch-2.8.0-cp312-cp312-manylinux_2_28_aarch64.whl.metadata (30 kB)
+Requirement already satisfied: scikit-learn in /opt/conda/lib/python3.12/site-packages (from sentence-transformers) (1.7.0)
+Requirement already satisfied: scipy in /opt/conda/lib/python3.12/site-packages (from sentence-transformers) (1.15.2)
+Collecting huggingface-hub&gt;=0.20.0 (from sentence-transformers)
+  Downloading huggingface_hub-0.34.4-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: Pillow in /opt/conda/lib/python3.12/site-packages (from sentence-transformers) (11.2.1)
+Requirement already satisfied: typing_extensions&gt;=4.5.0 in /opt/conda/lib/python3.12/site-packages (from sentence-transformers) (4.14.0)
+Collecting filelock (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers)
+  Using cached filelock-3.18.0-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: numpy&gt;=1.17 in /opt/conda/lib/python3.12/site-packages (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers) (2.2.6)
+Requirement already satisfied: packaging&gt;=20.0 in /opt/conda/lib/python3.12/site-packages (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers) (25.0)
+Requirement already satisfied: pyyaml&gt;=5.1 in /opt/conda/lib/python3.12/site-packages (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers) (6.0.2)
+Collecting regex!=2019.12.17 (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers)
+  Using cached regex-2025.7.34-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (40 kB)
+Requirement already satisfied: requests in /opt/conda/lib/python3.12/site-packages (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers) (2.32.4)
+Collecting tokenizers&lt;0.22,&gt;=0.21 (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers)
+  Using cached tokenizers-0.21.4-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.7 kB)
+Collecting safetensors&gt;=0.4.3 (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers)
+  Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.1 kB)
+Requirement already satisfied: fsspec&gt;=2023.5.0 in /opt/conda/lib/python3.12/site-packages (from huggingface-hub&gt;=0.20.0-&gt;sentence-transformers) (2025.5.1)
+Collecting hf-xet&lt;2.0.0,&gt;=1.1.3 (from huggingface-hub&gt;=0.20.0-&gt;sentence-transformers)
+  Downloading hf_xet-1.1.7-cp37-abi3-manylinux_2_28_aarch64.whl.metadata (703 bytes)
+Collecting aiofiles&lt;25.0,&gt;=22.0 (from gradio)
+  Using cached aiofiles-24.1.0-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: anyio&lt;5.0,&gt;=3.0 in /opt/conda/lib/python3.12/site-packages (from gradio) (4.9.0)
+Requirement already satisfied: brotli&gt;=1.1.0 in /opt/conda/lib/python3.12/site-packages (from gradio) (1.1.0)
+Collecting fastapi&lt;1.0,&gt;=0.115.2 (from gradio)
+  Using cached fastapi-0.116.1-py3-none-any.whl.metadata (28 kB)
+Collecting ffmpy (from gradio)
+  Using cached ffmpy-0.6.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting gradio-client==1.11.0 (from gradio)
+  Using cached gradio_client-1.11.0-py3-none-any.whl.metadata (7.1 kB)
+Requirement already satisfied: groovy~=0.1 in /home/jovyan/.local/lib/python3.12/site-packages (from gradio) (0.1.2)
+Requirement already satisfied: httpx&lt;1.0,&gt;=0.24.1 in /opt/conda/lib/python3.12/site-packages (from gradio) (0.28.1)
+Requirement already satisfied: jinja2&lt;4.0 in /opt/conda/lib/python3.12/site-packages (from gradio) (3.1.6)
+Requirement already satisfied: markupsafe&lt;4.0,&gt;=2.0 in /opt/conda/lib/python3.12/site-packages (from gradio) (3.0.2)
+Collecting orjson~=3.0 (from gradio)
+  Using cached orjson-3.11.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (42 kB)
+Requirement already satisfied: pandas&lt;3.0,&gt;=1.0 in /opt/conda/lib/python3.12/site-packages (from gradio) (2.2.3)
+Requirement already satisfied: pydantic&lt;2.12,&gt;=2.0 in /opt/conda/lib/python3.12/site-packages (from gradio) (2.11.7)
+Collecting pydub (from gradio)
+  Using cached pydub-0.25.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting python-multipart&gt;=0.0.18 (from gradio)
+  Using cached python_multipart-0.0.20-py3-none-any.whl.metadata (1.8 kB)
+Requirement already satisfied: ruff&gt;=0.9.3 in /home/jovyan/.local/lib/python3.12/site-packages (from gradio) (0.12.7)
+Requirement already satisfied: safehttpx&lt;0.2.0,&gt;=0.1.6 in /home/jovyan/.local/lib/python3.12/site-packages (from gradio) (0.1.6)
+Collecting semantic-version~=2.0 (from gradio)
+  Using cached semantic_version-2.10.0-py2.py3-none-any.whl.metadata (9.7 kB)
+Collecting starlette&lt;1.0,&gt;=0.40.0 (from gradio)
+  Using cached starlette-0.47.2-py3-none-any.whl.metadata (6.2 kB)
+Requirement already satisfied: tomlkit&lt;0.14.0,&gt;=0.12.0 in /home/jovyan/.local/lib/python3.12/site-packages (from gradio) (0.13.3)
+Requirement already satisfied: typer&lt;1.0,&gt;=0.12 in /home/jovyan/.local/lib/python3.12/site-packages (from gradio) (0.16.0)
+Collecting uvicorn&gt;=0.14.0 (from gradio)
+  Using cached uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting websockets&lt;16.0,&gt;=10.0 (from gradio-client==1.11.0-&gt;gradio)
+  Using cached websockets-15.0.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.8 kB)
+Requirement already satisfied: idna&gt;=2.8 in /opt/conda/lib/python3.12/site-packages (from anyio&lt;5.0,&gt;=3.0-&gt;gradio) (3.10)
+Requirement already satisfied: sniffio&gt;=1.1 in /opt/conda/lib/python3.12/site-packages (from anyio&lt;5.0,&gt;=3.0-&gt;gradio) (1.3.1)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.12/site-packages (from httpx&lt;1.0,&gt;=0.24.1-&gt;gradio) (2025.6.15)
+Requirement already satisfied: httpcore==1.* in /opt/conda/lib/python3.12/site-packages (from httpx&lt;1.0,&gt;=0.24.1-&gt;gradio) (1.0.9)
+Requirement already satisfied: h11&gt;=0.16 in /opt/conda/lib/python3.12/site-packages (from httpcore==1.*-&gt;httpx&lt;1.0,&gt;=0.24.1-&gt;gradio) (0.16.0)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/conda/lib/python3.12/site-packages (from pandas&lt;3.0,&gt;=1.0-&gt;gradio) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in /opt/conda/lib/python3.12/site-packages (from pandas&lt;3.0,&gt;=1.0-&gt;gradio) (2025.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in /opt/conda/lib/python3.12/site-packages (from pandas&lt;3.0,&gt;=1.0-&gt;gradio) (2025.2)
+Requirement already satisfied: annotated-types&gt;=0.6.0 in /opt/conda/lib/python3.12/site-packages (from pydantic&lt;2.12,&gt;=2.0-&gt;gradio) (0.7.0)
+Requirement already satisfied: pydantic-core==2.33.2 in /opt/conda/lib/python3.12/site-packages (from pydantic&lt;2.12,&gt;=2.0-&gt;gradio) (2.33.2)
+Requirement already satisfied: typing-inspection&gt;=0.4.0 in /opt/conda/lib/python3.12/site-packages (from pydantic&lt;2.12,&gt;=2.0-&gt;gradio) (0.4.1)
+Requirement already satisfied: click&gt;=8.0.0 in /opt/conda/lib/python3.12/site-packages (from typer&lt;1.0,&gt;=0.12-&gt;gradio) (8.2.1)
+Requirement already satisfied: shellingham&gt;=1.3.0 in /home/jovyan/.local/lib/python3.12/site-packages (from typer&lt;1.0,&gt;=0.12-&gt;gradio) (1.5.4)
+Requirement already satisfied: rich&gt;=10.11.0 in /home/jovyan/.local/lib/python3.12/site-packages (from typer&lt;1.0,&gt;=0.12-&gt;gradio) (14.1.0)
+Requirement already satisfied: six&gt;=1.5 in /opt/conda/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&lt;3.0,&gt;=1.0-&gt;gradio) (1.17.0)
+Collecting markdown-it-py&gt;=2.2.0 (from rich&gt;=10.11.0-&gt;typer&lt;1.0,&gt;=0.12-&gt;gradio)
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Requirement already satisfied: pygments&lt;3.0.0,&gt;=2.13.0 in /opt/conda/lib/python3.12/site-packages (from rich&gt;=10.11.0-&gt;typer&lt;1.0,&gt;=0.12-&gt;gradio) (2.19.1)
+Collecting mdurl~=0.1 (from markdown-it-py&gt;=2.2.0-&gt;rich&gt;=10.11.0-&gt;typer&lt;1.0,&gt;=0.12-&gt;gradio)
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.12/site-packages (from torch&gt;=1.11.0-&gt;sentence-transformers) (80.9.0)
+Requirement already satisfied: sympy&gt;=1.13.3 in /opt/conda/lib/python3.12/site-packages (from torch&gt;=1.11.0-&gt;sentence-transformers) (1.14.0)
+Requirement already satisfied: networkx in /opt/conda/lib/python3.12/site-packages (from torch&gt;=1.11.0-&gt;sentence-transformers) (3.5)
+Requirement already satisfied: mpmath&lt;1.4,&gt;=1.1.0 in /opt/conda/lib/python3.12/site-packages (from sympy&gt;=1.13.3-&gt;torch&gt;=1.11.0-&gt;sentence-transformers) (1.3.0)
+Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in /opt/conda/lib/python3.12/site-packages (from requests-&gt;transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers) (3.4.2)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/conda/lib/python3.12/site-packages (from requests-&gt;transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers) (2.4.0)
+Requirement already satisfied: joblib&gt;=1.2.0 in /opt/conda/lib/python3.12/site-packages (from scikit-learn-&gt;sentence-transformers) (1.5.1)
+Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /opt/conda/lib/python3.12/site-packages (from scikit-learn-&gt;sentence-transformers) (3.6.0)
+Downloading sentence_transformers-5.1.0-py3-none-any.whl (483 kB)
+Downloading transformers-4.55.0-py3-none-any.whl (11.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 49.4 MB/s eta 0:00:0000:01
+Downloading huggingface_hub-0.34.4-py3-none-any.whl (561 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 561.5/561.5 kB 42.0 MB/s eta 0:00:00
+Downloading hf_xet-1.1.7-cp37-abi3-manylinux_2_28_aarch64.whl (3.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 46.5 MB/s eta 0:00:00
+Using cached tokenizers-0.21.4-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (3.0 MB)
+Using cached faiss_cpu-1.11.0.post1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (3.8 MB)
+Downloading gradio-5.41.1-py3-none-any.whl (59.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.7/59.7 MB 49.3 MB/s eta 0:00:00a 0:00:01
+Using cached gradio_client-1.11.0-py3-none-any.whl (324 kB)
+Using cached aiofiles-24.1.0-py3-none-any.whl (15 kB)
+Using cached fastapi-0.116.1-py3-none-any.whl (95 kB)
+Using cached orjson-3.11.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (132 kB)
+Using cached semantic_version-2.10.0-py2.py3-none-any.whl (15 kB)
+Using cached starlette-0.47.2-py3-none-any.whl (72 kB)
+Using cached websockets-15.0.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (183 kB)
+Using cached python_multipart-0.0.20-py3-none-any.whl (24 kB)
+Using cached regex-2025.7.34-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (797 kB)
+Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (473 kB)
+Downloading torch-2.8.0-cp312-cp312-manylinux_2_28_aarch64.whl (101.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.9/101.9 MB 52.3 MB/s eta 0:00:0000:010:01
+Using cached uvicorn-0.35.0-py3-none-any.whl (66 kB)
+Using cached ffmpy-0.6.1-py3-none-any.whl (5.5 kB)
+Using cached filelock-3.18.0-py3-none-any.whl (16 kB)
+Using cached pydub-0.25.1-py2.py3-none-any.whl (32 kB)
+Installing collected packages: pydub, websockets, uvicorn, semantic-version, safetensors, regex, python-multipart, orjson, mdurl, hf-xet, filelock, ffmpy, faiss-cpu, aiofiles, torch, starlette, markdown-it-py, huggingface-hub, tokenizers, gradio-client, fastapi, transformers, sentence-transformers, gradio
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24/24 [gradio]23/24 [gradio]e-transformers]
+Successfully installed aiofiles-24.1.0 faiss-cpu-1.11.0.post1 fastapi-0.116.1 ffmpy-0.6.1 filelock-3.18.0 gradio-5.41.1 gradio-client-1.11.0 hf-xet-1.1.7 huggingface-hub-0.34.4 markdown-it-py-3.0.0 mdurl-0.1.2 orjson-3.11.1 pydub-0.25.1 python-multipart-0.0.20 regex-2025.7.34 safetensors-0.6.2 semantic-version-2.10.0 sentence-transformers-5.1.0 starlette-0.47.2 tokenizers-0.21.4 torch-2.8.0 transformers-4.55.0 uvicorn-0.35.0 websockets-15.0.1</code></pre>
+</div>
 </div>
 <div id="1708953c" class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers <span class="im">import</span> SentenceTransformer</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> faiss</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers <span class="im">import</span> SentenceTransformer</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> faiss</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="2195017d" class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># model = "sentence-transformers/all-MiniLM-L6-v2"</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># model = 'bert-base-nli-mean-tokens'</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span><span class="st">'all-mpnet-base-v2'</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>embedder <span class="op">=</span> SentenceTransformer(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># model = "sentence-transformers/all-MiniLM-L6-v2"</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># model = 'bert-base-nli-mean-tokens'</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span><span class="st">'all-mpnet-base-v2'</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>embedder <span class="op">=</span> SentenceTransformer(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="969623b1" class="cell" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>question_cache <span class="op">=</span> []</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>question_cache <span class="op">=</span> []</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="5caf1150" class="cell" data-execution_count="27">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Example  and Demonstration Code</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># print(embedder.encode('Hello!'))</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>sentence <span class="op">=</span> [<span class="st">'Hello how are you today?'</span>, <span class="st">'Hi how was yoru day?'</span>]</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>example <span class="op">=</span>embedder.encode(sentence).shape</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(embedder.encode(sentence).shape)</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers <span class="im">import</span> SentenceTransformer, util</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>embedder <span class="op">=</span> SentenceTransformer(<span class="st">'all-MiniLM-L6-v2'</span>)  <span class="co"># or your chosen model</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>sentence <span class="op">=</span> [<span class="st">'Hello how are you today?'</span>, <span class="st">'Hi how was your day?'</span>]</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>embeddings <span class="op">=</span> embedder.encode(sentence, convert_to_tensor<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>similarities <span class="op">=</span> util.cos_sim(embeddings, embeddings)</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(similarities)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Example  and Demonstration Code</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># print(embedder.encode('Hello!'))</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>sentence <span class="op">=</span> [<span class="st">'Hello how are you today?'</span>, <span class="st">'Hi how was yoru day?'</span>]</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>example <span class="op">=</span>embedder.encode(sentence).shape</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(embedder.encode(sentence).shape)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers <span class="im">import</span> SentenceTransformer, util</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>embedder <span class="op">=</span> SentenceTransformer(<span class="st">'all-MiniLM-L6-v2'</span>)  <span class="co"># or your chosen model</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>sentence <span class="op">=</span> [<span class="st">'Hello how are you today?'</span>, <span class="st">'Hi how was your day?'</span>]</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>embeddings <span class="op">=</span> embedder.encode(sentence, convert_to_tensor<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>similarities <span class="op">=</span> util.cos_sim(embeddings, embeddings)</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(similarities)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(2, 768)
 tensor([[1.0000, 0.8333],
@@ -313,49 +443,49 @@ tensor([[1.0000, 0.8333],
 </div>
 </div>
 <div id="c388d934" class="cell" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>embs <span class="op">=</span> embedder.encode(docs, batch_size<span class="op">=</span><span class="dv">64</span>, convert_to_numpy<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#pass in the shape of youre embeedding</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>index <span class="op">=</span> faiss.IndexFlatL2(embs.shape[<span class="dv">1</span>])</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(index.is_trained)</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>index.add(embs)</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Number of vectors in our index</span></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(index.ntotal)</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>embs <span class="op">=</span> embedder.encode(docs, batch_size<span class="op">=</span><span class="dv">64</span>, convert_to_numpy<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">#pass in the shape of youre embeedding</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>index <span class="op">=</span> faiss.IndexFlatL2(embs.shape[<span class="dv">1</span>])</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(index.is_trained)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>index.add(embs)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Number of vectors in our index</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(index.ntotal)</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True
 329</code></pre>
 </div>
 </div>
 <div id="dabb28df" class="cell" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>time</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">#embedd this sentenace </span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>xq <span class="op">=</span> embedder.encode([<span class="st">'can you tell me the damage a longsword does?'</span>])</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co">#k is the number of similar verctors you would like to return </span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>k<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># In our index, seach for a vector that is similar to xq. And returns the Vector IDs 162</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>D,I <span class="op">=</span> index.search(xq,k)</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(I)</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Returns the vectors that are most simialr from docs</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> I[<span class="dv">0</span>]:</span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(docs[i])</span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="co">#  # or your chosen model</span></span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="co"># sentence = ['can you tell me the damage a longsword does?', 'type: spell name: MeteorSwarm description: Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature ']</span></span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>embeddings <span class="op">=</span> embedder.encode(sentence, convert_to_tensor<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>similarities <span class="op">=</span> util.cos_sim(embeddings, embeddings)</span>
-<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(similarities)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>time</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co">#embedd this sentenace </span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>xq <span class="op">=</span> embedder.encode([<span class="st">'can you tell me the damage a longsword does?'</span>])</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co">#k is the number of similar verctors you would like to return </span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>k<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># In our index, seach for a vector that is similar to xq. And returns the Vector IDs 162</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>D,I <span class="op">=</span> index.search(xq,k)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(I)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Returns the vectors that are most simialr from docs</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> I[<span class="dv">0</span>]:</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(docs[i])</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="co">#  # or your chosen model</span></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="co"># sentence = ['can you tell me the damage a longsword does?', 'type: spell name: MeteorSwarm description: Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature ']</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>embeddings <span class="op">=</span> embedder.encode(sentence, convert_to_tensor<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>similarities <span class="op">=</span> util.cos_sim(embeddings, embeddings)</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(similarities)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[162]]
 
@@ -396,25 +526,25 @@ Wall time: 12.5 ms</code></pre>
 </div>
 </div>
 <div id="dccc0ccb" class="cell" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> retrieve(question: <span class="bu">str</span>, k: <span class="bu">int</span> <span class="op">=</span> <span class="dv">5</span>):</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    q_emb <span class="op">=</span> embedder.encode([question]).astype(<span class="st">"float32"</span>)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    D, I <span class="op">=</span> index.search(q_emb, k)                <span class="co"># distances &amp; indices</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    hits <span class="op">=</span> [docs[i] <span class="cf">for</span> i <span class="kw">in</span> I[<span class="dv">0</span>]]</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"</span><span class="ch">\n\n</span><span class="st">"</span>.join(hits)</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> retrieve(question: <span class="bu">str</span>, k: <span class="bu">int</span> <span class="op">=</span> <span class="dv">5</span>):</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    q_emb <span class="op">=</span> embedder.encode([question]).astype(<span class="st">"float32"</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    D, I <span class="op">=</span> index.search(q_emb, k)                <span class="co"># distances &amp; indices</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    hits <span class="op">=</span> [docs[i] <span class="cf">for</span> i <span class="kw">in</span> I[<span class="dv">0</span>]]</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"</span><span class="ch">\n\n</span><span class="st">"</span>.join(hits)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="0ce32950" class="cell" data-execution_count="31">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> pipeline, AutoTokenizer</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>model_name <span class="op">=</span> <span class="st">"TinyLlama/TinyLlama-1.1B-Chat-v1.0"</span>   <span class="co"># any small instruct model works</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>tok  <span class="op">=</span> AutoTokenizer.from_pretrained(model_name, trust_remote_code<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>llm  <span class="op">=</span> pipeline(<span class="st">"text-generation"</span>,</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>                model<span class="op">=</span>model_name,</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>                tokenizer<span class="op">=</span>tok,</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>                device<span class="op">=</span><span class="st">"cpu"</span>,           </span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>                max_new_tokens<span class="op">=</span><span class="dv">200</span>,</span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>                temperature<span class="op">=</span><span class="fl">.01</span>)        </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> pipeline, AutoTokenizer</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>model_name <span class="op">=</span> <span class="st">"TinyLlama/TinyLlama-1.1B-Chat-v1.0"</span>   <span class="co"># any small instruct model works</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>tok  <span class="op">=</span> AutoTokenizer.from_pretrained(model_name, trust_remote_code<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>llm  <span class="op">=</span> pipeline(<span class="st">"text-generation"</span>,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>                model<span class="op">=</span>model_name,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>                tokenizer<span class="op">=</span>tok,</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>                device<span class="op">=</span><span class="st">"cpu"</span>,           </span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>                max_new_tokens<span class="op">=</span><span class="dv">200</span>,</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>                temperature<span class="op">=</span><span class="fl">.01</span>)        </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Device set to use cpu</code></pre>
 </div>
@@ -422,87 +552,87 @@ Wall time: 12.5 ms</code></pre>
 <section id="is-this-cache-causing-a-problem-by-taking-up-too-much-memory-is-there-way-to-store-previous-questions-in-a-database-or-file-outside-of-memory" class="level4">
 <h4 class="anchored" data-anchor-id="is-this-cache-causing-a-problem-by-taking-up-too-much-memory-is-there-way-to-store-previous-questions-in-a-database-or-file-outside-of-memory">is this cache causing a problem by taking up too much memory? is there way to store previous questions in a database or file outside of memory?</h4>
 <div id="fbeccdc5" class="cell" data-execution_count="32">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers.util <span class="im">import</span> cos_sim</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_cached_answer(query, threshold<span class="op">=</span><span class="fl">0.90</span>):</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    q_emb <span class="op">=</span> embedder.encode(query, convert_to_tensor<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> item <span class="kw">in</span> question_cache:</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>        sim <span class="op">=</span> cos_sim(q_emb, item[<span class="st">'embedding'</span>]).item()</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> sim <span class="op">&gt;=</span> threshold:</span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"⚡ Using cached answer (similarity=</span><span class="sc">{</span>sim<span class="sc">:.2f}</span><span class="ss">) for: </span><span class="sc">{</span>item[<span class="st">'question'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> item[<span class="st">'answer'</span>]</span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># elif sim &lt;= .6:</span></span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     return print('Please reference the rulebook')</span></span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> answer(question: <span class="bu">str</span>):</span>
-<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>    cached <span class="op">=</span> get_cached_answer(question)</span>
-<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> cached:</span>
-<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> cached</span>
-<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>    context <span class="op">=</span> retrieve(question, k<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>    prompt <span class="op">=</span> <span class="ss">f"""You are a helpful assistant. </span></span>
-<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a><span class="ss">    Answer the question using only the context below. </span></span>
-<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a><span class="ss">    If the answer is not in the context, say you don't know. </span></span>
-<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a><span class="ss">    Ensure the answers don't have duplicate information.</span></span>
-<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a><span class="ss">    When providing an answer:</span></span>
-<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Ensure clarity and conciseness.</span></span>
-<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a><span class="ss">    - If listing items (e.g., spells, weapons, races, features), return only **unique** items. Avoid duplicates or synonyms.</span></span>
-<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Format your answer as a **numbered list** or **clear bullet points** if appropriate.</span></span>
-<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Never invent facts outside the provided context.</span></span>
-<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a><span class="ss">    You are a Dungeon Master guiding players through a high-fantasy tabletop role-playing game. You have access to private source data including maps, NPC backstories, world lore, secret quest logic, and random outcome rules. You use this source data to maintain a consistent, immersive world and adapt to player decisions.</span></span>
-<span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a><span class="ss">You must respond in **structured JSON format** with the following fields:</span></span>
-<span id="cb24-35"><a href="#cb24-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-36"><a href="#cb24-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-37"><a href="#cb24-37" aria-hidden="true" tabindex="-1"></a><span class="ss">  "narration": "A vivid, immersive description of what the player experiences based on their action or question.",</span></span>
-<span id="cb24-38"><a href="#cb24-38" aria-hidden="true" tabindex="-1"></a><span class="ss">  "player_options": "A list of clear, relevant actions the player might consider next.",</span></span>
-<span id="cb24-39"><a href="#cb24-39" aria-hidden="true" tabindex="-1"></a><span class="ss">  "hidden_logic": "Any behind-the-scenes interpretation, dice outcomes, or consequences that should NOT be shown to the player.",</span></span>
-<span id="cb24-40"><a href="#cb24-40" aria-hidden="true" tabindex="-1"></a><span class="ss">  "dm_notes": "Optional notes for the Dungeon Master (not shown to players) that track state, foreshadow, or suggest future branches."</span></span>
-<span id="cb24-41"><a href="#cb24-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-42"><a href="#cb24-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-43"><a href="#cb24-43" aria-hidden="true" tabindex="-1"></a><span class="ss">Guidelines:</span></span>
-<span id="cb24-44"><a href="#cb24-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- Use rich sensory language in the `narration` to describe environments and NPCs.</span></span>
-<span id="cb24-45"><a href="#cb24-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- Present `player_options` as concise, relevant next moves based on the situation.</span></span>
-<span id="cb24-46"><a href="#cb24-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- Use `hidden_logic` to simulate dice rolls, resolve stealth, detect lies, determine outcomes, or trigger events. Keep this hidden from the player.</span></span>
-<span id="cb24-47"><a href="#cb24-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- Use `dm_notes` to internally track ongoing threads, NPC states, quest flags, or emerging tension.</span></span>
-<span id="cb24-48"><a href="#cb24-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-49"><a href="#cb24-49" aria-hidden="true" tabindex="-1"></a><span class="ss">Never break character or refer to the format directly. This structure is for backend use only and should feel seamless to the player.</span></span>
-<span id="cb24-50"><a href="#cb24-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-51"><a href="#cb24-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-52"><a href="#cb24-52" aria-hidden="true" tabindex="-1"></a><span class="ss">    ### Context</span></span>
-<span id="cb24-53"><a href="#cb24-53" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span><span class="sc">{</span>context<span class="sc">}</span></span>
-<span id="cb24-54"><a href="#cb24-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-55"><a href="#cb24-55" aria-hidden="true" tabindex="-1"></a><span class="ss">    ### Question</span></span>
-<span id="cb24-56"><a href="#cb24-56" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span><span class="sc">{</span>question<span class="sc">}</span></span>
-<span id="cb24-57"><a href="#cb24-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-58"><a href="#cb24-58" aria-hidden="true" tabindex="-1"></a><span class="ss">    ### Answer</span></span>
-<span id="cb24-59"><a href="#cb24-59" aria-hidden="true" tabindex="-1"></a><span class="ss">    """</span></span>
-<span id="cb24-60"><a href="#cb24-60" aria-hidden="true" tabindex="-1"></a>    resp <span class="op">=</span> llm(prompt)[<span class="dv">0</span>][<span class="st">"generated_text"</span>]</span>
-<span id="cb24-61"><a href="#cb24-61" aria-hidden="true" tabindex="-1"></a>    final_answer <span class="op">=</span> resp.split(<span class="st">"### Answer"</span>, <span class="dv">1</span>)[<span class="op">-</span><span class="dv">1</span>].strip()</span>
-<span id="cb24-62"><a href="#cb24-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-63"><a href="#cb24-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Store in cache</span></span>
-<span id="cb24-64"><a href="#cb24-64" aria-hidden="true" tabindex="-1"></a>    question_cache.append({</span>
-<span id="cb24-65"><a href="#cb24-65" aria-hidden="true" tabindex="-1"></a>        <span class="st">'question'</span>: question,</span>
-<span id="cb24-66"><a href="#cb24-66" aria-hidden="true" tabindex="-1"></a>        <span class="st">'embedding'</span>: embedder.encode(question, convert_to_tensor<span class="op">=</span><span class="va">True</span>),</span>
-<span id="cb24-67"><a href="#cb24-67" aria-hidden="true" tabindex="-1"></a>        <span class="st">'answer'</span>: final_answer</span>
-<span id="cb24-68"><a href="#cb24-68" aria-hidden="true" tabindex="-1"></a>    })</span>
-<span id="cb24-69"><a href="#cb24-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-70"><a href="#cb24-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> final_answer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers.util <span class="im">import</span> cos_sim</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_cached_answer(query, threshold<span class="op">=</span><span class="fl">0.90</span>):</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    q_emb <span class="op">=</span> embedder.encode(query, convert_to_tensor<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> item <span class="kw">in</span> question_cache:</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>        sim <span class="op">=</span> cos_sim(q_emb, item[<span class="st">'embedding'</span>]).item()</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> sim <span class="op">&gt;=</span> threshold:</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"⚡ Using cached answer (similarity=</span><span class="sc">{</span>sim<span class="sc">:.2f}</span><span class="ss">) for: </span><span class="sc">{</span>item[<span class="st">'question'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> item[<span class="st">'answer'</span>]</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># elif sim &lt;= .6:</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     return print('Please reference the rulebook')</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> answer(question: <span class="bu">str</span>):</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>    cached <span class="op">=</span> get_cached_answer(question)</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> cached:</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> cached</span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>    context <span class="op">=</span> retrieve(question, k<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>    prompt <span class="op">=</span> <span class="ss">f"""You are a helpful assistant. </span></span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a><span class="ss">    Answer the question using only the context below. </span></span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a><span class="ss">    If the answer is not in the context, say you don't know. </span></span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a><span class="ss">    Ensure the answers don't have duplicate information.</span></span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a><span class="ss">    When providing an answer:</span></span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Ensure clarity and conciseness.</span></span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a><span class="ss">    - If listing items (e.g., spells, weapons, races, features), return only **unique** items. Avoid duplicates or synonyms.</span></span>
+<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Format your answer as a **numbered list** or **clear bullet points** if appropriate.</span></span>
+<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Never invent facts outside the provided context.</span></span>
+<span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a><span class="ss">    You are a Dungeon Master guiding players through a high-fantasy tabletop role-playing game. You have access to private source data including maps, NPC backstories, world lore, secret quest logic, and random outcome rules. You use this source data to maintain a consistent, immersive world and adapt to player decisions.</span></span>
+<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-34"><a href="#cb25-34" aria-hidden="true" tabindex="-1"></a><span class="ss">You must respond in **structured JSON format** with the following fields:</span></span>
+<span id="cb25-35"><a href="#cb25-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-36"><a href="#cb25-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-37"><a href="#cb25-37" aria-hidden="true" tabindex="-1"></a><span class="ss">  "narration": "A vivid, immersive description of what the player experiences based on their action or question.",</span></span>
+<span id="cb25-38"><a href="#cb25-38" aria-hidden="true" tabindex="-1"></a><span class="ss">  "player_options": "A list of clear, relevant actions the player might consider next.",</span></span>
+<span id="cb25-39"><a href="#cb25-39" aria-hidden="true" tabindex="-1"></a><span class="ss">  "hidden_logic": "Any behind-the-scenes interpretation, dice outcomes, or consequences that should NOT be shown to the player.",</span></span>
+<span id="cb25-40"><a href="#cb25-40" aria-hidden="true" tabindex="-1"></a><span class="ss">  "dm_notes": "Optional notes for the Dungeon Master (not shown to players) that track state, foreshadow, or suggest future branches."</span></span>
+<span id="cb25-41"><a href="#cb25-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-42"><a href="#cb25-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-43"><a href="#cb25-43" aria-hidden="true" tabindex="-1"></a><span class="ss">Guidelines:</span></span>
+<span id="cb25-44"><a href="#cb25-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- Use rich sensory language in the `narration` to describe environments and NPCs.</span></span>
+<span id="cb25-45"><a href="#cb25-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- Present `player_options` as concise, relevant next moves based on the situation.</span></span>
+<span id="cb25-46"><a href="#cb25-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- Use `hidden_logic` to simulate dice rolls, resolve stealth, detect lies, determine outcomes, or trigger events. Keep this hidden from the player.</span></span>
+<span id="cb25-47"><a href="#cb25-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- Use `dm_notes` to internally track ongoing threads, NPC states, quest flags, or emerging tension.</span></span>
+<span id="cb25-48"><a href="#cb25-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-49"><a href="#cb25-49" aria-hidden="true" tabindex="-1"></a><span class="ss">Never break character or refer to the format directly. This structure is for backend use only and should feel seamless to the player.</span></span>
+<span id="cb25-50"><a href="#cb25-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-51"><a href="#cb25-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-52"><a href="#cb25-52" aria-hidden="true" tabindex="-1"></a><span class="ss">    ### Context</span></span>
+<span id="cb25-53"><a href="#cb25-53" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span><span class="sc">{</span>context<span class="sc">}</span></span>
+<span id="cb25-54"><a href="#cb25-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-55"><a href="#cb25-55" aria-hidden="true" tabindex="-1"></a><span class="ss">    ### Question</span></span>
+<span id="cb25-56"><a href="#cb25-56" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span><span class="sc">{</span>question<span class="sc">}</span></span>
+<span id="cb25-57"><a href="#cb25-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-58"><a href="#cb25-58" aria-hidden="true" tabindex="-1"></a><span class="ss">    ### Answer</span></span>
+<span id="cb25-59"><a href="#cb25-59" aria-hidden="true" tabindex="-1"></a><span class="ss">    """</span></span>
+<span id="cb25-60"><a href="#cb25-60" aria-hidden="true" tabindex="-1"></a>    resp <span class="op">=</span> llm(prompt)[<span class="dv">0</span>][<span class="st">"generated_text"</span>]</span>
+<span id="cb25-61"><a href="#cb25-61" aria-hidden="true" tabindex="-1"></a>    final_answer <span class="op">=</span> resp.split(<span class="st">"### Answer"</span>, <span class="dv">1</span>)[<span class="op">-</span><span class="dv">1</span>].strip()</span>
+<span id="cb25-62"><a href="#cb25-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-63"><a href="#cb25-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Store in cache</span></span>
+<span id="cb25-64"><a href="#cb25-64" aria-hidden="true" tabindex="-1"></a>    question_cache.append({</span>
+<span id="cb25-65"><a href="#cb25-65" aria-hidden="true" tabindex="-1"></a>        <span class="st">'question'</span>: question,</span>
+<span id="cb25-66"><a href="#cb25-66" aria-hidden="true" tabindex="-1"></a>        <span class="st">'embedding'</span>: embedder.encode(question, convert_to_tensor<span class="op">=</span><span class="va">True</span>),</span>
+<span id="cb25-67"><a href="#cb25-67" aria-hidden="true" tabindex="-1"></a>        <span class="st">'answer'</span>: final_answer</span>
+<span id="cb25-68"><a href="#cb25-68" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb25-69"><a href="#cb25-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-70"><a href="#cb25-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> final_answer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="8780187e" class="cell" data-execution_count="33">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">"can you tel me about the spell acid splash and where you got this information?"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">"can you tel me about the spell acid splash and where you got this information?"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Yes, the spell acid splash is a powerful abjuration spell that can be used to create a pool of acid that can be used to damage or harm enemies. The spell is typically cast on a target that is within 10 feet of the caster, and the acid splash can be used to deal damage to multiple targets at once. The acid splash can also be used to create a pool of acid that can be used to create a shield of acid that can be used to block attacks. The acid splash can also be used to create a pool of acid that can be used to create a shield of acid that can be used to block attacks. The acid splash can also be used to create a pool of acid that can be used to create a shield of acid that can be used to block attacks. The acid splash can also be used to create a pool of acid that can be used to create a shield of acid that can be used to block attacks</code></pre>
 </div>
 </div>
 <div id="e4298cd1" class="cell" data-execution_count="34">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">"what is the damage of a longsword?"</span>))</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">"how much damage does a longsword?"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">"what is the damage of a longsword?"</span>))</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">"how much damage does a longsword?"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
@@ -774,7 +904,7 @@ Wall time: 12.5 ms</code></pre>
 </div>
 </div>
 <div id="3674aad1" class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">"Im not sure what spells to cast, I'm a druid, can you help me?"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">"Im not sure what spells to cast, I'm a druid, can you help me?"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Yes, I'd be happy to help you. Here are some spells you might consider casting:
     
@@ -787,7 +917,7 @@ Wall time: 12.5 ms</code></pre>
 </div>
 </div>
 <div id="920e4de2" class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">"what weapons can a druid use?"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">"what weapons can a druid use?"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1. Daggers
     2. Sickles
@@ -816,7 +946,7 @@ Wall time: 12.5 ms</code></pre>
 </div>
 </div>
 <div id="82e40c0e" class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">'what is a feat?'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(answer(<span class="st">'what is a feat?'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>A feat is a special ability that grants a character a bonus to their ability score or ability modifier for a specific number of rounds. It is a powerful tool for characters who want to take advantage of a specific skill or tool, but may not have the time or resources to learn a new skill.
 
@@ -835,242 +965,236 @@ Wall time: 12.5 ms</code></pre>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
       }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
         }
       }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
     }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
     }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
       } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
         }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
       }
     }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
           }
         } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
+          // See if we can fetch this
+          fetch(url.split('#')[0])
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
+            const note = htmlDoc.getElementById(id);
             if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
+              const html = processXRef(id, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1078,161 +1202,185 @@ Wall time: 12.5 ms</code></pre>
             instance.show();
           });
         }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
       } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
             }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
         });
       }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
     }
-  });
-  </script>
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
 </div> <!-- /content -->
 
 
