@@ -1,0 +1,13 @@
+---
+title: "Final"
+format: html
+---
+
+**A web-based AI assistant for Dungeons & Dragons**  
+*Knowledge is Our Quest. Dungeons are Our Dataset.*
+
+---
+
+##  What did we get done?
+
+TBD

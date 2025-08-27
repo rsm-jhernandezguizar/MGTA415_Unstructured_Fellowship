@@ -10,11 +10,13 @@ website:
       - href: index.qmd
         text: '<i class="bi bi-house"></i> Home'
       - href: D&D Chat Bot.qmd
-        text: '<i class="bi bi-newspaper"></i> D&D Chat Bot'
-      - href: Roadmap.qmd
-        text: '<i class="bi bi-pencil"></i> Roadmap'
+        text: '<i class="bi bi-robot"></i> D&D Chat Bot'
       - href: Midterm.qmd
         text: '<i class="bi bi-gear"></i> Midterm'
+      - href: Final.qmd
+        text: '<i class="bi bi-mortarboard-fill"></i> Final'
+      - href: Roadmap.qmd
+        text: '<i class="bi bi-map"></i> Roadmap'
 
 format:
   html:
