@@ -10,5 +10,7 @@ title: "Roadmap"
 #   page-size: 10
 ---
 
-Caching coming soon :) 
-Having multiple agents and using a "think tank" to come up with the best answer rather than a voting schema
+##  Enhancements
+
+- Caching for faster responses and limited offline capability
+- "White glove" server system for higher performance at lower costs
