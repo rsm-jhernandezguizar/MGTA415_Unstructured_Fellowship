@@ -20,7 +20,7 @@ about:
 The **D&D AI Assistant** is a Python-powered LLM chatbot that helps Dungeon Masters run streamlined sessions.  
 Ask rules questions, roll dice, spawn NPCs, track combat, and even push tokens to your favorite VTT — all from one interface.
 
-[Get Started Here!](./D%26D%20Chat%20Bot.qmd)
+[Get Started Here!](<./D&D Chat Bot.qmd>)
 
 ---
 
