@@ -1,8 +1,23 @@
-streamlit==1.36.0
-google-generativeai==0.7.2
-python-dotenv==1.0.1
-google-genai
+streamlit
+langchain
+faiss-cpu
+pymupdf
+requests
+transformers
+sentence-transformers
 python-dotenv
+langchain-community
+crewai
+crewai_tools
+langchain-huggingface
+huggingface_hub
+transformers
+torch 
 
-# -- json
-# -- typing
+# # CrewAI stack (pin all of these to avoid backtracking)
+# crewai==0.165.1
+# crewai_tools==0.62.3
+# chromadb==1.0.20
+# embedchain==0.1.128
+# openai==1.99.9
+# litellm==1.74.9
