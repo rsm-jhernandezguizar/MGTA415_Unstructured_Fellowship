@@ -43,6 +43,15 @@ from langchain.schema import Document
 # Hugging Face Transformers
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
 
+from pathlib import Path
+from dotenv import load_dotenv
+import os
+
+# Load env from both CWD and the script’s folder
+load_dotenv()  # tries current working directory
+load_dotenv(dotenv_path=Path(__file__).resolve().parent / ".env")  # Chatbot/.env
+
+
 # Gemini (Google GenAI); import is optional so the PDF RAG mode still works
 try:
     import os
