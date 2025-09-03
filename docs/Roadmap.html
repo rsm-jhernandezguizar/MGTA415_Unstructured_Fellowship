@@ -129,7 +129,6 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#enhancements" id="toc-enhancements" class="nav-link active" data-scroll-target="#enhancements"><span class="header-section-number">1</span> Enhancements</a></li>
-  <li><a href="#open-questions" id="toc-open-questions" class="nav-link" data-scroll-target="#open-questions"><span class="header-section-number">2</span> Open Questions</a></li>
   </ul>
 </nav>
     </div>
@@ -164,17 +163,17 @@ This roadmap outlines practical upgrades to move the project from prototype to r
 <section id="enhancements" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="enhancements"><span class="header-section-number">1</span> Enhancements</h2>
 <section id="caching" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="caching"><span class="header-section-number">1.1</span> 1) Caching</h3>
-<p><strong>Why:</strong> Reduce repeated computation and network calls to cut P95 latency and costs.<br>
-<strong>Where:</strong> - Results cache for identical retrieval/LLM requests (keyed by normalized prompt + params).<br>
+<h3 data-number="1.1" class="anchored" data-anchor-id="caching"><span class="header-section-number">1.1</span> Caching</h3>
+<p><strong>Why:</strong> Reduce repeated computation and network calls to cut latency and costs.<br>
+<strong>Where:</strong> - Results cache for identical retrieval/LLM requests (keyed by normalized prompt + parameters).<br>
 - Feature cache for expensive embeddings/chunking of unchanged documents.<br>
 <strong>How:</strong> - In‑memory (e.g., <code>functools.lru_cache</code>) for small, hot items; persistent store (e.g., SQLite/Redis) for larger artifacts.<br>
 - Cache invalidation by content hash (SHA‑256) of inputs; time‑to‑live for volatile sources.<br>
-<strong>Done when:</strong> P95 latency ↓ ≥30%; cache hit rate ≥60% on typical workloads.<br>
+<strong>Done when:</strong> Latency ↓ ≥30%; cache hit rate ≥60% on typical workloads.<br>
 <strong>Risks:</strong> Stale reads; storage growth → mitigate with TTL + size limits.</p>
 </section>
 <section id="indexing-retrieval-quality" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="indexing-retrieval-quality"><span class="header-section-number">1.2</span> 2) Indexing &amp; Retrieval Quality</h3>
+<h3 data-number="1.2" class="anchored" data-anchor-id="indexing-retrieval-quality"><span class="header-section-number">1.2</span> Indexing &amp; Retrieval Quality</h3>
 <ul>
 <li>Choose chunking strategy (semantic + fixed overlap), deduplicate near‑duplicates.</li>
 <li>Store embeddings with metadata; support hybrid (sparse + dense) search.</li>
@@ -182,7 +181,7 @@ This roadmap outlines practical upgrades to move the project from prototype to r
 </ul>
 </section>
 <section id="data-quality-validation" class="level3" data-number="1.3">
-<h3 data-number="1.3" class="anchored" data-anchor-id="data-quality-validation"><span class="header-section-number">1.3</span> 3) Data Quality &amp; Validation</h3>
+<h3 data-number="1.3" class="anchored" data-anchor-id="data-quality-validation"><span class="header-section-number">1.3</span> Data Quality &amp; Validation</h3>
 <ul>
 <li>Schemas for inputs/outputs (pydantic/Marshmallow).</li>
 <li>Guardrails for bad encodings, missing fields, and over‑long texts.</li>
@@ -190,7 +189,7 @@ This roadmap outlines practical upgrades to move the project from prototype to r
 </ul>
 </section>
 <section id="observability" class="level3" data-number="1.4">
-<h3 data-number="1.4" class="anchored" data-anchor-id="observability"><span class="header-section-number">1.4</span> 4) Observability</h3>
+<h3 data-number="1.4" class="anchored" data-anchor-id="observability"><span class="header-section-number">1.4</span> Observability</h3>
 <ul>
 <li>Structured logs (JSON) with request IDs.</li>
 <li>Metrics: latency, throughput, error rate, cache hit rate, token usage.</li>
@@ -198,7 +197,7 @@ This roadmap outlines practical upgrades to move the project from prototype to r
 </ul>
 </section>
 <section id="testing-cicd" class="level3" data-number="1.5">
-<h3 data-number="1.5" class="anchored" data-anchor-id="testing-cicd"><span class="header-section-number">1.5</span> 5) Testing &amp; CI/CD</h3>
+<h3 data-number="1.5" class="anchored" data-anchor-id="testing-cicd"><span class="header-section-number">1.5</span> Testing &amp; CI/CD</h3>
 <ul>
 <li>Unit tests for chunking, caching, and retrieval scoring.</li>
 <li>Golden‑set regression tests for RAG answers.</li>
@@ -206,7 +205,7 @@ This roadmap outlines practical upgrades to move the project from prototype to r
 </ul>
 </section>
 <section id="security-access" class="level3" data-number="1.6">
-<h3 data-number="1.6" class="anchored" data-anchor-id="security-access"><span class="header-section-number">1.6</span> 6) Security &amp; Access</h3>
+<h3 data-number="1.6" class="anchored" data-anchor-id="security-access"><span class="header-section-number">1.6</span> Security &amp; Access</h3>
 <ul>
 <li>Secrets via environment variables or a vault; never commit .env.</li>
 <li>Role‑based access for admin vs.&nbsp;viewer operations.</li>
@@ -214,7 +213,7 @@ This roadmap outlines practical upgrades to move the project from prototype to r
 </ul>
 </section>
 <section id="performance-cost" class="level3" data-number="1.7">
-<h3 data-number="1.7" class="anchored" data-anchor-id="performance-cost"><span class="header-section-number">1.7</span> 7) Performance &amp; Cost</h3>
+<h3 data-number="1.7" class="anchored" data-anchor-id="performance-cost"><span class="header-section-number">1.7</span> Performance &amp; Cost</h3>
 <ul>
 <li>Batch embeddings; stream responses where possible.</li>
 <li>Set token/price budgets per request.</li>
@@ -222,23 +221,15 @@ This roadmap outlines practical upgrades to move the project from prototype to r
 </ul>
 </section>
 <section id="documentation-dx" class="level3" data-number="1.8">
-<h3 data-number="1.8" class="anchored" data-anchor-id="documentation-dx"><span class="header-section-number">1.8</span> 8) Documentation &amp; DX</h3>
+<h3 data-number="1.8" class="anchored" data-anchor-id="documentation-dx"><span class="header-section-number">1.8</span> Documentation &amp; DX</h3>
 <ul>
 <li>Quickstart in README; example notebook.</li>
 <li>Architecture diagram (ingest → process → index → query).</li>
 <li>“How we evaluate” guide.</li>
 </ul>
-</section>
-</section>
-<section id="open-questions" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="open-questions"><span class="header-section-number">2</span> Open Questions</h2>
-<ul>
-<li>Target scale (documents/day, users)?</li>
-<li>Must‑have integrations (Google Drive, Slack, S3)?</li>
-<li>Hosting constraints and budget ceilings?</li>
-</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
