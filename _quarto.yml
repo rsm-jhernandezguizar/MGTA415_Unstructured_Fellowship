@@ -9,14 +9,16 @@ website:
     left:
       - href: index.qmd
         text: '<i class="bi bi-house"></i> Home'
+      - href: Roadmap.qmd
+        text: '<i class="bi bi-map"></i> Roadmap'
       - href: D&D Chat Bot.qmd
         text: '<i class="bi bi-robot"></i> D&D Chat Bot'
       - href: Midterm.qmd
         text: '<i class="bi bi-gear"></i> Midterm'
       - href: Final.qmd
         text: '<i class="bi bi-mortarboard-fill"></i> Final'
-      - href: Roadmap.qmd
-        text: '<i class="bi bi-map"></i> Roadmap'
+      - href: 'Meet the Team.qmd'
+        text: '<i class="bi bi-people-fill me-1"></i> Meet the Team'
 
 format:
   html:
