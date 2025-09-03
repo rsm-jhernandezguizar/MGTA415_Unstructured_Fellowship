@@ -155,77 +155,61 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><strong>Context for enhancements</strong><br>
-This roadmap outlines practical upgrades to move the project from prototype to reliable, fast, and maintainable. We’ll prioritize impact on user‑visible latency, relevance/quality, and developer experience, while keeping costs predictable.</p>
+This roadmap focuses on three practical upgrades: faster responses, more relevant results, and better visibility into how the system behaves—while keeping costs predictable.</p>
 <blockquote class="blockquote">
 <p>“Good code is its own best documentation.” — Steve McConnell</p>
 </blockquote>
 <hr>
 <section id="enhancements" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="enhancements"><span class="header-section-number">1</span> Enhancements</h2>
-<section id="caching" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="caching"><span class="header-section-number">1.1</span> Caching</h3>
-<p><strong>Why:</strong> Reduce repeated computation and network calls to cut latency and costs.<br>
-<strong>Where:</strong> - Results cache for identical retrieval/LLM requests (keyed by normalized prompt + parameters).<br>
-- Feature cache for expensive embeddings/chunking of unchanged documents.<br>
-<strong>How:</strong> - In‑memory (e.g., <code>functools.lru_cache</code>) for small, hot items; persistent store (e.g., SQLite/Redis) for larger artifacts.<br>
-- Cache invalidation by content hash (SHA‑256) of inputs; time‑to‑live for volatile sources.<br>
-<strong>Done when:</strong> Latency ↓ ≥30%; cache hit rate ≥60% on typical workloads.<br>
-<strong>Risks:</strong> Stale reads; storage growth → mitigate with TTL + size limits.</p>
-</section>
-<section id="indexing-retrieval-quality" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="indexing-retrieval-quality"><span class="header-section-number">1.2</span> Indexing &amp; Retrieval Quality</h3>
+<section id="caching" class="level3">
+<h3 class="anchored" data-anchor-id="caching">⚡️ Caching</h3>
 <ul>
-<li>Choose chunking strategy (semantic + fixed overlap), deduplicate near‑duplicates.</li>
-<li>Store embeddings with metadata; support hybrid (sparse + dense) search.</li>
-<li>Track NDCG@10 / Recall@10 using a small labeled eval set.</li>
+<li><strong>Goal:</strong> Reduce repeated work to improve speed and lower cost.</li>
+<li><strong>What we’ll do:</strong> Cache common answers and heavy computations; keep small items in memory and store larger ones on disk.</li>
+<li><strong>Success looks like:</strong> Median (p50) response ≤ <strong>2s</strong> and p95 ≤ <strong>6–8s</strong>; most repeated requests are served from cache.</li>
+<li><strong>Safeguards:</strong> Set time limits (TTL) and size limits; schedule regular cleanups to avoid stale or oversized data.</li>
 </ul>
 </section>
-<section id="data-quality-validation" class="level3" data-number="1.3">
-<h3 data-number="1.3" class="anchored" data-anchor-id="data-quality-validation"><span class="header-section-number">1.3</span> Data Quality &amp; Validation</h3>
+<section id="search-retrieval-quality" class="level3">
+<h3 class="anchored" data-anchor-id="search-retrieval-quality">🎯 Search &amp; Retrieval Quality</h3>
 <ul>
-<li>Schemas for inputs/outputs (pydantic/Marshmallow).</li>
-<li>Guardrails for bad encodings, missing fields, and over‑long texts.</li>
-<li>Automatic retry/backoff on transient errors.</li>
+<li><strong>Goal:</strong> Return the most useful information on the first try.</li>
+<li><strong>What we’ll do:</strong> Split documents into well-sized chunks with slight overlap; remove duplicates; use both keyword and semantic search with helpful metadata.</li>
+<li><strong>Success looks like:</strong> Users find what they need on the first page; <strong>thumbs-up rate</strong> ≥ <strong>70%</strong> on sampled sessions; fewer re-asks within 30s.</li>
+<li><strong>Safeguards:</strong> Adjust chunk size/overlap and examples when accuracy drifts.</li>
 </ul>
 </section>
-<section id="observability" class="level3" data-number="1.4">
-<h3 data-number="1.4" class="anchored" data-anchor-id="observability"><span class="header-section-number">1.4</span> Observability</h3>
+<section id="monitoring-visibility" class="level3">
+<h3 class="anchored" data-anchor-id="monitoring-visibility">📊 Monitoring &amp; Visibility</h3>
 <ul>
-<li>Structured logs (JSON) with request IDs.</li>
-<li>Metrics: latency, throughput, error rate, cache hit rate, token usage.</li>
-<li>Tracing spans around ingest → embed → retrieve → generate.</li>
-</ul>
-</section>
-<section id="testing-cicd" class="level3" data-number="1.5">
-<h3 data-number="1.5" class="anchored" data-anchor-id="testing-cicd"><span class="header-section-number">1.5</span> Testing &amp; CI/CD</h3>
+<li><strong>Goal:</strong> Detect issues before users feel them and learn from feedback.</li>
+<li><strong>What we’ll track (health):</strong>
 <ul>
-<li>Unit tests for chunking, caching, and retrieval scoring.</li>
-<li>Golden‑set regression tests for RAG answers.</li>
-<li>GitHub Actions to run tests, lint, and publish Quarto docs.</li>
-</ul>
-</section>
-<section id="security-access" class="level3" data-number="1.6">
-<h3 data-number="1.6" class="anchored" data-anchor-id="security-access"><span class="header-section-number">1.6</span> Security &amp; Access</h3>
+<li><strong>Speed:</strong> p50, <strong>p95</strong>, p99 latency<br>
+</li>
+<li><strong>Reliability:</strong> error rate<br>
+</li>
+<li><strong>Efficiency:</strong> cache hit rate, token usage/cost<br>
+</li>
+<li><strong>Traffic:</strong> requests per minute</li>
+</ul></li>
+<li><strong>What we’ll collect (quality):</strong>
 <ul>
-<li>Secrets via environment variables or a vault; never commit .env.</li>
-<li>Role‑based access for admin vs.&nbsp;viewer operations.</li>
-<li>Basic PII handling (masking, encrypted at rest).</li>
-</ul>
-</section>
-<section id="performance-cost" class="level3" data-number="1.7">
-<h3 data-number="1.7" class="anchored" data-anchor-id="performance-cost"><span class="header-section-number">1.7</span> Performance &amp; Cost</h3>
+<li><strong>👍/👎</strong> on answers (simple binary feedback)<br>
+</li>
+<li>Short optional note for “why”<br>
+</li>
+<li>Implicit signals (re-asks, unusually long pauses)</li>
+</ul></li>
+<li><strong>How we’ll implement (static-site friendly):</strong>
 <ul>
-<li>Batch embeddings; stream responses where possible.</li>
-<li>Set token/price budgets per request.</li>
-<li>Nightly job to prune dead indexes and cold caches.</li>
-</ul>
-</section>
-<section id="documentation-dx" class="level3" data-number="1.8">
-<h3 data-number="1.8" class="anchored" data-anchor-id="documentation-dx"><span class="header-section-number">1.8</span> Documentation &amp; DX</h3>
-<ul>
-<li>Quickstart in README; example notebook.</li>
-<li>Architecture diagram (ingest → process → index → query).</li>
-<li>“How we evaluate” guide.</li>
+<li>Add <strong>👍 Helpful / 👎 Needs work</strong> buttons that post to a <strong>Google Form</strong> or open a prefilled <strong>GitHub Issue</strong>.<br>
+</li>
+<li>Include a lightweight <code>request_id</code> with each answer to tie feedback to a session.</li>
+</ul></li>
+<li><strong>Success looks like:</strong> Dashboards show p95 under target; alerts trigger on spikes; <strong>thumbs-up rate</strong> trends upward month-over-month.</li>
+<li><strong>Safeguards:</strong> Redact PII/secrets from logs; review thresholds monthly and tune alerts to reduce noise.</li>
 </ul>
 
 

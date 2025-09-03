@@ -5,10 +5,11 @@ format:
     toc: true
     toc-depth: 2
     number-sections: true
+    number-depth: 2
 ---
 
 **Context for enhancements**  
-This roadmap outlines practical upgrades to move the project from prototype to reliable, fast, and maintainable. We’ll prioritize impact on user‑visible latency, relevance/quality, and developer experience, while keeping costs predictable.
+This roadmap focuses on three practical upgrades: faster responses, more relevant results, and better visibility into how the system behaves—while keeping costs predictable.
 
 > “Good code is its own best documentation.” — Steve McConnell
 
@@ -16,48 +17,31 @@ This roadmap outlines practical upgrades to move the project from prototype to r
 
 ## Enhancements
 
-### Caching
-**Why:** Reduce repeated computation and network calls to cut  latency and costs.  
-**Where:** 
-- Results cache for identical retrieval/LLM requests (keyed by normalized prompt + parameters).  
-- Feature cache for expensive embeddings/chunking of unchanged documents.  
-**How:** 
-- In‑memory (e.g., `functools.lru_cache`) for small, hot items; persistent store (e.g., SQLite/Redis) for larger artifacts.  
-- Cache invalidation by content hash (SHA‑256) of inputs; time‑to‑live for volatile sources.  
-**Done when:** Latency ↓ ≥30%; cache hit rate ≥60% on typical workloads.  
-**Risks:** Stale reads; storage growth → mitigate with TTL + size limits.
+### ⚡️ Caching
+- **Goal:** Reduce repeated work to improve speed and lower cost.
+- **What we’ll do:** Cache common answers and heavy computations; keep small items in memory and store larger ones on disk.
+- **Success looks like:** Median (p50) response ≤ **2s** and p95 ≤ **6–8s**; most repeated requests are served from cache.
+- **Safeguards:** Set time limits (TTL) and size limits; schedule regular cleanups to avoid stale or oversized data.
 
-### Indexing & Retrieval Quality
-- Choose chunking strategy (semantic + fixed overlap), deduplicate near‑duplicates.
-- Store embeddings with metadata; support hybrid (sparse + dense) search.
-- Track NDCG@10 / Recall@10 using a small labeled eval set.
+### 🎯 Search & Retrieval Quality
+- **Goal:** Return the most useful information on the first try.
+- **What we’ll do:** Split documents into well-sized chunks with slight overlap; remove duplicates; use both keyword and semantic search with helpful metadata.
+- **Success looks like:** Users find what they need on the first page; **thumbs-up rate** ≥ **70%** on sampled sessions; fewer re-asks within 30s.
+- **Safeguards:** Adjust chunk size/overlap and examples when accuracy drifts.
 
-### Data Quality & Validation
-- Schemas for inputs/outputs (pydantic/Marshmallow).
-- Guardrails for bad encodings, missing fields, and over‑long texts.
-- Automatic retry/backoff on transient errors.
-
-### Observability
-- Structured logs (JSON) with request IDs.
-- Metrics: latency, throughput, error rate, cache hit rate, token usage.
-- Tracing spans around ingest → embed → retrieve → generate.
-
-### Testing & CI/CD
-- Unit tests for chunking, caching, and retrieval scoring.
-- Golden‑set regression tests for RAG answers.
-- GitHub Actions to run tests, lint, and publish Quarto docs.
-
-### Security & Access
-- Secrets via environment variables or a vault; never commit .env.
-- Role‑based access for admin vs. viewer operations.
-- Basic PII handling (masking, encrypted at rest).
-
-### Performance & Cost
-- Batch embeddings; stream responses where possible.
-- Set token/price budgets per request.
-- Nightly job to prune dead indexes and cold caches.
-
-### Documentation & DX
-- Quickstart in README; example notebook.
-- Architecture diagram (ingest → process → index → query).
-- “How we evaluate” guide.
+### 📊 Monitoring & Visibility
+- **Goal:** Detect issues before users feel them and learn from feedback.
+- **What we’ll track (health):**  
+  - **Speed:** p50, **p95**, p99 latency  
+  - **Reliability:** error rate  
+  - **Efficiency:** cache hit rate, token usage/cost  
+  - **Traffic:** requests per minute
+- **What we’ll collect (quality):**  
+  - **👍/👎** on answers (simple binary feedback)  
+  - Short optional note for “why”  
+  - Implicit signals (re-asks, unusually long pauses)
+- **How we’ll implement (static-site friendly):**  
+  - Add **👍 Helpful / 👎 Needs work** buttons that post to a **Google Form** or open a prefilled **GitHub Issue**.  
+  - Include a lightweight `request_id` with each answer to tie feedback to a session.
+- **Success looks like:** Dashboards show p95 under target; alerts trigger on spikes; **thumbs-up rate** trends upward month-over-month.
+- **Safeguards:** Redact PII/secrets from logs; review thresholds monthly and tune alerts to reduce noise.
