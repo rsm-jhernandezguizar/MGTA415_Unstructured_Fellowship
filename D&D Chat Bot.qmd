@@ -2,5 +2,11 @@
 title: "LLM Chat Assistant"
 format: html
 ---
+<iframe
+	src="https://dndproject-dnd-chatbot.hf.space"
+	frameborder="0"
+	width="850"
+	height="450"
+></iframe>
 
 **Insert recording here**
