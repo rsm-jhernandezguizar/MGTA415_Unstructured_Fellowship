@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Roadmap – Dungeons &amp; Dragons AI Assistant</title>
+<title>Final – Dungeons &amp; Dragons AI Assistant</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,11 +101,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"><i class="bi bi-gear"></i> Midterm</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Final.html"> 
+    <a class="nav-link active" href="./Final.html" aria-current="page"> 
 <span class="menu-text"><i class="bi bi-mortarboard-fill"></i> Final</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Roadmap.html" aria-current="page"> 
+    <a class="nav-link" href="./Roadmap.html"> 
 <span class="menu-text"><i class="bi bi-map"></i> Roadmap</span></a>
   </li>  
 </ul>
@@ -119,15 +119,28 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link active" data-scroll-target="#problem-statement">Problem Statement</a></li>
+  <li><a href="#dd-market-cap-backoftheenvelope" id="toc-dd-market-cap-backoftheenvelope" class="nav-link" data-scroll-target="#dd-market-cap-backoftheenvelope">D&amp;D Market Cap (Back‑of‑the‑Envelope)</a></li>
+  <li><a href="#code-evaluation-criteria-how-we-judged-our-build" id="toc-code-evaluation-criteria-how-we-judged-our-build" class="nav-link" data-scroll-target="#code-evaluation-criteria-how-we-judged-our-build">Code Evaluation Criteria (how we judged our build)</a></li>
+  <li><a href="#code-breakdown" id="toc-code-breakdown" class="nav-link" data-scroll-target="#code-breakdown">Code Breakdown</a>
+  <ul class="collapse">
+  <li><a href="#chatbot-rag-pipeline" id="toc-chatbot-rag-pipeline" class="nav-link" data-scroll-target="#chatbot-rag-pipeline">Chatbot (RAG pipeline)</a></li>
+  <li><a href="#crewai-multiagent-orchestration" id="toc-crewai-multiagent-orchestration" class="nav-link" data-scroll-target="#crewai-multiagent-orchestration">CrewAI (multi‑agent orchestration)</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Roadmap</h1>
+<h1 class="title">Final</h1>
 </div>
 
 
@@ -144,9 +157,98 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Caching coming soon :) Having multiple agents and using a “think tank” to come up with the best answer rather than a voting schema</p>
+<p><strong>A web-based AI assistant for Dungeons &amp; Dragons</strong><br>
+<em>Knowledge is Our Quest. Dungeons are Our Dataset.</em></p>
+<hr>
+<section id="problem-statement" class="level2">
+<h2 class="anchored" data-anchor-id="problem-statement">Problem Statement</h2>
+<p>Dungeon Masters (DMs) spend hours prepping worlds, encounters, and rules lookups—only to improvise when players go off-script. Our project builds a <strong>web-based AI assistant</strong> that:</p>
+<ul>
+<li><strong>Cuts prep time</strong> with on-demand NPCs, locations, and encounters.</li>
+<li><strong>Speeds up play</strong> with instant, cited rules answers (RAG).</li>
+<li><strong>Remembers the story</strong> with persistent campaign memory.</li>
+<li><strong>Fits modern tables</strong> via Virtual Tabletop (VTT) integrations.</li>
+</ul>
+<p><strong>Stack (at a glance):</strong> LangChain for orchestration, <strong>RAG</strong> for grounded answers, and <strong>CrewAI</strong> for multi-agent workflows (lore, rules, encounters, notes).<br>
+<strong>Outcome:</strong> Less grunt work, more ✨roleplay.</p>
+<hr>
+</section>
+<section id="dd-market-cap-backoftheenvelope" class="level2">
+<h2 class="anchored" data-anchor-id="dd-market-cap-backoftheenvelope">D&amp;D Market Cap (Back‑of‑the‑Envelope)</h2>
+<p><strong>Goal:</strong> Estimate a standalone valuation if D&amp;D were spun out as its own entity.</p>
+<p><strong>Method (summarized):</strong> 1) Start from Wizards of the Coast revenue (D&amp;D + MTG).<br>
+2) Attribute <strong>~15–25%</strong> to D&amp;D.<br>
+3) Apply a reasonable IP multiple (entertainment IP with strong community).<br>
+4) Add intangibles (licensing, cultural impact, merch).</p>
+<p><strong>Bottom line:</strong> A <strong>~$1–2B</strong> range is plausible given the brand’s revenue share, IP strength, and community monetization potential.</p>
+<blockquote class="blockquote">
+<p><em>Assumptions:</em> These are directional ranges intended for scenario planning, not investment advice. Replace with updated filings/analyst splits if available.</p>
+</blockquote>
+<hr>
+</section>
+<section id="code-evaluation-criteria-how-we-judged-our-build" class="level2">
+<h2 class="anchored" data-anchor-id="code-evaluation-criteria-how-we-judged-our-build">Code Evaluation Criteria (how we judged our build)</h2>
+<p>We scored the system across the dimensions below (1–5 scale), with short tests/demos for each:</p>
+<ol type="1">
+<li><strong>Answer Quality &amp; Grounding</strong> – factuality, citations, and retrieval precision/recall.<br>
+</li>
+<li><strong>Latency &amp; Throughput</strong> – snappy UI response under typical session load.<br>
+</li>
+<li><strong>RAG Retrieval Quality</strong> – chunking strategy, embeddings, and re-ranking effectiveness.<br>
+</li>
+<li><strong>Safety &amp; Guardrails</strong> – prompt hardening, refusal behavior, and jailbreak resistance.<br>
+</li>
+<li><strong>Orchestration Robustness</strong> – CrewAI task/hand-off reliability and error handling.<br>
+</li>
+<li><strong>Observability</strong> – logs, traces, and prompt/result capture for debugging.<br>
+</li>
+<li><strong>DX &amp; Maintainability</strong> – clear folder structure, configs, and documentation.<br>
+</li>
+<li><strong>VTT Readiness</strong> – clean interfaces (tokens, stat blocks, flavor text) and idempotent pushes.<br>
+</li>
+<li><strong>Reproducibility</strong> – deterministic seeds where feasible; scripts for setup/ingest/evals.<br>
+</li>
+<li><strong>UX</strong> – streaming responses, markdown rendering, and minimal click count for common tasks.</li>
+</ol>
+<hr>
+</section>
+<section id="code-breakdown" class="level2">
+<h2 class="anchored" data-anchor-id="code-breakdown">Code Breakdown</h2>
+<section id="chatbot-rag-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="chatbot-rag-pipeline">Chatbot (RAG pipeline)</h3>
+<ul>
+<li><strong>Ingestion:</strong> loaders → text normalization → chunking → embeddings → vector store.<br>
+</li>
+<li><strong>Retrieval:</strong> top‑k semantic search (+optional re-ranking) with <strong>source citations</strong>.<br>
+</li>
+<li><strong>Generation:</strong> prompt templates tuned for rules, lore, and safety; <strong>streaming</strong> output.<br>
+</li>
+<li><strong>Memory:</strong> per‑campaign/session summaries (episodic recap + key NPC/quest state).<br>
+</li>
+<li><strong>Guardrails:</strong> banned content filters, tool-use constraints, and self-check steps.<br>
+</li>
+<li><strong>DevX:</strong> <code>.env</code> configs, Make/CLI scripts for index rebuilds and quick evals.</li>
+</ul>
+</section>
+<section id="crewai-multiagent-orchestration" class="level3">
+<h3 class="anchored" data-anchor-id="crewai-multiagent-orchestration">CrewAI (multi‑agent orchestration)</h3>
+<ul>
+<li><strong>Rules Sage</strong> – authoritative rules lookups (grounded + citations).<br>
+</li>
+<li><strong>Lore Master</strong> – locations, NPCs, and narrative beats that fit tone &amp; canon constraints.<br>
+</li>
+<li><strong>Encounter Designer</strong> – balanced encounter drafts with hazards/objectives.<br>
+</li>
+<li><strong>Session Scribe</strong> – recap + memory updates post-session.<br>
+</li>
+<li><strong>VTT Pusher</strong> – converts content to tokens/blocks and pushes to the VTT API.<br>
+</li>
+<li><strong>Coordinator</strong> – routes tasks, verifies outputs, and retries on errors.</li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

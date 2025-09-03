@@ -1,0 +1,98 @@
+[
+  {
+    "class": "Barbarian",
+    "description": "A fierce warrior of primitive background who can enter a battle rage",
+    "hit_die": "d12",
+    "primary_ability": "Strength",
+    "saving_throws": "Strength & Constitution",
+    "armor_and_weapon_proficiencies": "Light and medium armor, shields, simple and martial weapons"
+  },
+  {
+    "class": "Bard",
+    "description": "An inspiring magician whose power echoes the music of creation",
+    "hit_die": "d8",
+    "primary_ability": "Charisma",
+    "saving_throws": "Dexterity & Charisma",
+    "armor_and_weapon_proficiencies": "Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords"
+  },
+  {
+    "class": "Cleric",
+    "description": "A priestly champion who wields divine magic in service of a higher power",
+    "hit_die": "d8",
+    "primary_ability": "Wisdom",
+    "saving_throws": "Wisdom & Charisma",
+    "armor_and_weapon_proficiencies": "Light and medium armor, shields, simple weapons"
+  },
+  {
+    "class": "Druid",
+    "description": "A priest of the Old Faith, wielding the powers of nature\u2014moonlight and plant growth, fire and lightning\u2014and adopting animal forms",
+    "hit_die": "d8",
+    "primary_ability": "Wisdom",
+    "saving_throws": "Intelligence & Wisdom",
+    "armor_and_weapon_proficiencies": "Light and medium armor (nonmetal), shields (nonmetal), clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears"
+  },
+  {
+    "class": "Fighter",
+    "description": "A master of martial combat, skilled with a variety of weapons and armor",
+    "hit_die": "d10",
+    "primary_ability": "Strength or Dexterity",
+    "saving_throws": "Strength & Constitution",
+    "armor_and_weapon_proficiencies": "All armor, shields, simple and martial weapons"
+  },
+  {
+    "class": "Monk",
+    "description": "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection",
+    "hit_die": "d8",
+    "primary_ability": "Dexterity & Wisdom",
+    "saving_throws": "Strength & Dexterity",
+    "armor_and_weapon_proficiencies": "Simple weapons, shortswords"
+  },
+  {
+    "class": "Paladin",
+    "description": "A holy warrior bound to a sacred oath",
+    "hit_die": "d10",
+    "primary_ability": "Strength & Charisma",
+    "saving_throws": "Wisdom & Charisma",
+    "armor_and_weapon_proficiencies": "All armor, shields, simple and martial weapons"
+  },
+  {
+    "class": "Ranger",
+    "description": "A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization",
+    "hit_die": "d10",
+    "primary_ability": "Dexterity & Wisdom",
+    "saving_throws": "Strength & Dexterity",
+    "armor_and_weapon_proficiencies": "Light and medium armor, shields, simple and martial weapons"
+  },
+  {
+    "class": "Rogue",
+    "description": "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
+    "hit_die": "d8",
+    "primary_ability": "Dexterity",
+    "saving_throws": "Dexterity & Intelligence",
+    "armor_and_weapon_proficiencies": "Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords"
+  },
+  {
+    "class": "Sorcerer",
+    "description": "A spellcaster who draws on inherent magic from a gift or bloodline",
+    "hit_die": "d6",
+    "primary_ability": "Charisma",
+    "saving_throws": "Constitution & Charisma",
+    "armor_and_weapon_proficiencies": "Daggers, darts, slings, quarterstaffs, light crossbows"
+  },
+  {
+    "class": "Warlock",
+    "description": "A wielder of magic that is derived from a bargain with an extraplanar entity",
+    "hit_die": "d8",
+    "primary_ability": "Charisma",
+    "saving_throws": "Wisdom & Charisma",
+    "armor_and_weapon_proficiencies": "Light armor, simple weapons"
+  },
+  {
+    "class": "Wizard",
+    "description": "A scholarly magic-user capable of manipulating the structures of reality",
+    "hit_die": "d6",
+    "primary_ability": "Intelligence",
+    "saving_throws": "Intelligence & Wisdom",
+    "armor_and_weapon_proficiencies": "Daggers, darts, slings, quarterstaffs, light crossbows"
+  }
+]

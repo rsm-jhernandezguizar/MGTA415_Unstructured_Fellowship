@@ -1,0 +1,74 @@
+---
+title: "Final"
+format: html
+---
+
+**A web-based AI assistant for Dungeons & Dragons**  
+*Knowledge is Our Quest. Dungeons are Our Dataset.*
+
+---
+
+## Problem Statement
+
+Dungeon Masters (DMs) spend hours prepping worlds, encounters, and rules lookups—only to improvise when players go off-script. Our project builds a **web-based AI assistant** that:
+
+- **Cuts prep time** with on-demand NPCs, locations, and encounters.
+- **Speeds up play** with instant, cited rules answers (RAG).
+- **Remembers the story** with persistent campaign memory.
+- **Fits modern tables** via Virtual Tabletop (VTT) integrations.
+
+**Stack (at a glance):** LangChain for orchestration, **RAG** for grounded answers, and **CrewAI** for multi-agent workflows (lore, rules, encounters, notes).  
+**Outcome:** Less grunt work, more ✨roleplay.
+
+---
+
+## D&D Market Cap (Back‑of‑the‑Envelope)
+
+**Goal:** Estimate a standalone valuation if D&D were spun out as its own entity.
+
+**Method (summarized):**
+1) Start from Wizards of the Coast revenue (D&D + MTG).  
+2) Attribute **~15–25%** to D&D.  
+3) Apply a reasonable IP multiple (entertainment IP with strong community).  
+4) Add intangibles (licensing, cultural impact, merch).
+
+**Bottom line:** A **~$1–2B** range is plausible given the brand’s revenue share, IP strength, and community monetization potential.
+
+> _Assumptions:_ These are directional ranges intended for scenario planning, not investment advice. Replace with updated filings/analyst splits if available.
+
+---
+
+## Code Evaluation Criteria (how we judged our build)
+
+We scored the system across the dimensions below (1–5 scale), with short tests/demos for each:
+
+1. **Answer Quality & Grounding** – factuality, citations, and retrieval precision/recall.  
+2. **Latency & Throughput** – snappy UI response under typical session load.  
+3. **RAG Retrieval Quality** – chunking strategy, embeddings, and re-ranking effectiveness.  
+4. **Safety & Guardrails** – prompt hardening, refusal behavior, and jailbreak resistance.  
+5. **Orchestration Robustness** – CrewAI task/hand-off reliability and error handling.  
+6. **Observability** – logs, traces, and prompt/result capture for debugging.  
+7. **DX & Maintainability** – clear folder structure, configs, and documentation.  
+8. **VTT Readiness** – clean interfaces (tokens, stat blocks, flavor text) and idempotent pushes.  
+9. **Reproducibility** – deterministic seeds where feasible; scripts for setup/ingest/evals.  
+10. **UX** – streaming responses, markdown rendering, and minimal click count for common tasks.
+
+---
+
+## Code Breakdown
+
+### Chatbot (RAG pipeline)
+- **Ingestion:** loaders → text normalization → chunking → embeddings → vector store.  
+- **Retrieval:** top‑k semantic search (+optional re-ranking) with **source citations**.  
+- **Generation:** prompt templates tuned for rules, lore, and safety; **streaming** output.  
+- **Memory:** per‑campaign/session summaries (episodic recap + key NPC/quest state).  
+- **Guardrails:** banned content filters, tool-use constraints, and self-check steps.  
+- **DevX:** `.env` configs, Make/CLI scripts for index rebuilds and quick evals.
+
+### CrewAI (multi‑agent orchestration)
+- **Rules Sage** – authoritative rules lookups (grounded + citations).  
+- **Lore Master** – locations, NPCs, and narrative beats that fit tone & canon constraints.  
+- **Encounter Designer** – balanced encounter drafts with hazards/objectives.  
+- **Session Scribe** – recap + memory updates post-session.  
+- **VTT Pusher** – converts content to tokens/blocks and pushes to the VTT API.  
+- **Coordinator** – routes tasks, verifies outputs, and retries on errors.

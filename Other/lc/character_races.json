@@ -1,0 +1,238 @@
+{
+  "races": [
+    {
+      "name": "Dwarf",
+      "ability_score_increase": "Your Constitution score increases by 2.",
+      "age": "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.",
+      "alignment": "Most dwarves are lawful, believing firmly in the benefits of a well-ordered society.",
+      "size": "Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.",
+      "speed": "Your base walking speed is 25 feet.",
+      "languages": [
+        "Common",
+        "Dwarvish"
+      ],
+      "traits": [
+        {
+          "name": "Darkvision",
+          "description": "Accustomed to life underground, you have superior vision in dark and dim conditions."
+        },
+        {
+          "name": "Dwarven Resilience",
+          "description": "You have advantage on saving throws against poison, and you have resistance against poison damage."
+        },
+        {
+          "name": "Dwarven Combat Training",
+          "description": "You have proficiency with the battleaxe, handaxe, throwing hammer, and warhammer."
+        },
+        {
+          "name": "Tool Proficiency",
+          "description": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
+        },
+        {
+          "name": "Stonecunning",
+          "description": "When you make an Intelligence (History) check related to stonework, add double proficiency."
+        }
+      ]
+    },
+    {
+      "name": "Elf",
+      "ability_score_increase": "Your Dexterity score increases by 2.",
+      "age": "Elves typically claim adulthood around age 100 and can live to be 750 years old.",
+      "alignment": "Elves love freedom, variety, and self-expression. They are more often good than not.",
+      "size": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
+      "speed": "Your base walking speed is 30 feet.",
+      "languages": [
+        "Common",
+        "Elvish"
+      ],
+      "traits": [
+        {
+          "name": "Darkvision",
+          "description": "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions."
+        },
+        {
+          "name": "Keen Senses",
+          "description": "You have proficiency in the Perception skill."
+        },
+        {
+          "name": "Fey Ancestry",
+          "description": "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
+        },
+        {
+          "name": "Trance",
+          "description": "Elves don't need to sleep. Instead, they meditate deeply for 4 hours a day."
+        }
+      ]
+    },
+    {
+      "name": "Halfling",
+      "ability_score_increase": "Your Dexterity score increases by 2.",
+      "age": "A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.",
+      "alignment": "Most halflings are lawful good. As a rule, they are good-hearted and kind.",
+      "size": "Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small.",
+      "speed": "Your base walking speed is 25 feet.",
+      "languages": [
+        "Common",
+        "Halfling"
+      ],
+      "traits": [
+        {
+          "name": "Lucky",
+          "description": "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
+        },
+        {
+          "name": "Brave",
+          "description": "You have advantage on saving throws against being frightened."
+        },
+        {
+          "name": "Halfling Nimbleness",
+          "description": "You can move through the space of any creature that is of a size larger than yours."
+        }
+      ]
+    },
+    {
+      "name": "Human",
+      "ability_score_increase": "Your ability scores each increase by 1.",
+      "age": "Humans reach adulthood in their late teens and live less than a century.",
+      "alignment": "Humans tend toward no particular alignment. The best and the worst are found among them.",
+      "size": "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Your size is Medium.",
+      "speed": "Your base walking speed is 30 feet.",
+      "languages": [
+        "Common",
+        "One extra language of your choice"
+      ],
+      "traits": []
+    },
+    {
+      "name": "Dragonborn",
+      "ability_score_increase": "Your Strength score increases by 2, and your Charisma score increases by 1.",
+      "age": "Dragonborn reach adulthood by 15 and live to be around 80.",
+      "alignment": "Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil.",
+      "size": "Dragonborn are taller and heavier than humans. Your size is Medium.",
+      "speed": "Your base walking speed is 30 feet.",
+      "languages": [
+        "Common",
+        "Draconic"
+      ],
+      "traits": [
+        {
+          "name": "Draconic Ancestry",
+          "description": "Choose one type of dragon. Your breath weapon and damage resistance are determined by the dragon type."
+        },
+        {
+          "name": "Breath Weapon",
+          "description": "You can use your action to exhale destructive energy. Save DC = 8 + Con mod + prof bonus."
+        },
+        {
+          "name": "Damage Resistance",
+          "description": "You have resistance to the damage type associated with your draconic ancestry."
+        }
+      ]
+    },
+    {
+      "name": "Gnome",
+      "ability_score_increase": "Your Intelligence score increases by 2.",
+      "age": "Gnomes mature at the same rate as humans and can live 350 to almost 500 years.",
+      "alignment": "Gnomes are most often good. Those who tend toward law are sages and inventors; those toward chaos are tricksters.",
+      "size": "Gnomes are between 3 and 4 feet tall. Your size is Small.",
+      "speed": "Your base walking speed is 25 feet.",
+      "languages": [
+        "Common",
+        "Gnomish"
+      ],
+      "traits": [
+        {
+          "name": "Darkvision",
+          "description": "Accustomed to life underground, you have superior vision in dark and dim conditions."
+        },
+        {
+          "name": "Gnome Cunning",
+          "description": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+        }
+      ]
+    },
+    {
+      "name": "Half-Elf",
+      "ability_score_increase": "Your Charisma score increases by 2, and two other ability scores of your choice increase by 1.",
+      "age": "Half-elves mature at the same rate as humans and live much longer, often exceeding 180 years.",
+      "alignment": "Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression.",
+      "size": "Half-elves are about the same size as humans. Your size is Medium.",
+      "speed": "Your base walking speed is 30 feet.",
+      "languages": [
+        "Common",
+        "Elvish",
+        "One extra language of your choice"
+      ],
+      "traits": [
+        {
+          "name": "Darkvision",
+          "description": "Thanks to your elf blood, you have superior vision in dark and dim conditions."
+        },
+        {
+          "name": "Fey Ancestry",
+          "description": "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
+        },
+        {
+          "name": "Skill Versatility",
+          "description": "You gain proficiency in two skills of your choice."
+        }
+      ]
+    },
+    {
+      "name": "Half-Orc",
+      "ability_score_increase": "Your Strength score increases by 2, and your Constitution score increases by 1.",
+      "age": "Half-orcs mature a little faster than humans and rarely live longer than 75 years.",
+      "alignment": "Half-orcs inherit a tendency toward chaos and are not strongly inclined toward good.",
+      "size": "Half-orcs are larger and bulkier than humans. Your size is Medium.",
+      "speed": "Your base walking speed is 30 feet.",
+      "languages": [
+        "Common",
+        "Orc"
+      ],
+      "traits": [
+        {
+          "name": "Darkvision",
+          "description": "Thanks to your orc blood, you have superior vision in dark and dim conditions."
+        },
+        {
+          "name": "Menacing",
+          "description": "You gain proficiency in the Intimidation skill."
+        },
+        {
+          "name": "Relentless Endurance",
+          "description": "When reduced to 0 hit points but not killed outright, drop to 1 hit point instead once per long rest."
+        },
+        {
+          "name": "Savage Attacks",
+          "description": "When you score a critical hit with a melee weapon, roll one extra damage die."
+        }
+      ]
+    },
+    {
+      "name": "Tiefling",
+      "ability_score_increase": "Your Intelligence score increases by 1, and your Charisma score increases by 2.",
+      "age": "Tieflings mature at the same rate as humans but live a few years longer.",
+      "alignment": "Tieflings might not have an innate tendency toward evil, but many of them end up there. Most tend toward a chaotic alignment.",
+      "size": "Tieflings are about the same size and build as humans. Your size is Medium.",
+      "speed": "Your base walking speed is 30 feet.",
+      "languages": [
+        "Common",
+        "Infernal"
+      ],
+      "traits": [
+        {
+          "name": "Darkvision",
+          "description": "Thanks to your infernal heritage, you have superior vision in dark and dim conditions."
+        },
+        {
+          "name": "Hellish Resistance",
+          "description": "You have resistance to fire damage."
+        },
+        {
+          "name": "Infernal Legacy",
+          "description": "You know the thaumaturgy cantrip. At 3rd level, cast hellish rebuke once/day; at 5th, cast darkness once/day."
+        }
+      ]
+    }
+  ]
+}
