@@ -9,4 +9,3 @@ format: html
 	height="1000"
 ></iframe>
 
-**Insert recording here**

@@ -29,9 +29,8 @@ Alex builds robust data pipelines and quick ML prototypes.
 
 ::: {.g-col-12 .g-col-sm-6 .g-col-lg-3 .text-center}
 ![Lowell Capobianco](images/lowell.jpeg){.rounded-circle .shadow style="width:160px;height:160px;object-fit:cover;"}
-**Lowell Capobianco**  
-<span class="text-muted small">MS in Business Analytics Candidate (UCSD) | Business Process | Veteran | SQL | Python | Statistics | Modeling</span>  
-As a Business Process Analyst at Northrop Grumman, I apply my project and people management skills to support the design, development, and implementation of business processes and systems for aerospace and defense solutions. I use my expertise in online analytical processing (OLAP) to perform data analysis and reporting for various stakeholders. Before joining Northrop Grumman, I served as a Surface Warfare Officer in the US Navy for six years, where I led and trained teams of sailors, managed shipboard operations, and participated in multiple missions and exercises. I am passionate about applying my engineering and military background to the field of business analysis, and I am always eager to learn new skills and technologies to enhance my performance and contribute to the mission and vision of Northrop Grumman.
+**Lowell Capobianco**    
+Business Process Analyst at Northrop Grumman. I am passionate about applying my engineering and military background to the field of business analytics.
 :::
 
 ::: {.g-col-12 .g-col-sm-6 .g-col-lg-3 .text-center}
