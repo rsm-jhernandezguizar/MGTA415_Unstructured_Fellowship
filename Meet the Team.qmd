@@ -23,8 +23,8 @@ Experienced Project Manager with a demonstrated history of working in the inform
 ::: {.g-col-12 .g-col-sm-6 .g-col-lg-3 .text-center}
 ![Alex Wissman](images/alex.jpeg){.rounded-circle .shadow style="width:160px;height:160px;object-fit:cover;"}
 **Alex Wissman**  
-<span class="text-muted small">Role / Specialty</span>  
-Alex builds robust data pipelines and quick ML prototypes.
+<span class="text-muted small">Institutional Data Analyst</span>  
+Higher education data leader and Senior Institutional Data Analyst at UC San Diego’s Rady School of Management. Skilled in developing school-wide analytics and reporting frameworks that power accreditation, rankings, enrollment strategy, and alumni engagement.
 :::
 
 ::: {.g-col-12 .g-col-sm-6 .g-col-lg-3 .text-center}
