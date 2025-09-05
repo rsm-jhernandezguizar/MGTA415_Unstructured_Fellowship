@@ -30,13 +30,14 @@ Higher education data leader and Senior Institutional Data Analyst at UC San Die
 ::: {.g-col-12 .g-col-sm-6 .g-col-lg-3 .text-center}
 ![Lowell Capobianco](images/lowell.jpeg){.rounded-circle .shadow style="width:160px;height:160px;object-fit:cover;"}
 **Lowell Capobianco**    
-Business Process Analyst at Northrop Grumman. I am passionate about applying my engineering and military background to the field of business analytics.
+<span class="text-muted small">Business Process Analyst at Northrop Grumman</span>  
+I am passionate about applying my engineering and military background to the field of business analytics.ent.
 :::
 
 ::: {.g-col-12 .g-col-sm-6 .g-col-lg-3 .text-center}
 ![Juan Hernández Guizar](images/juan.jpeg){.rounded-circle .shadow style="width:160px;height:160px;object-fit:cover;"}
 **Juan Hernández Guizar**  
-<span class="text-muted small">Aerospace / Digital Transformation</span>  
+<span class="text-muted small">Digital Transformation and Aerospace Engineering</span>  
 Juan is a collaborative and resourceful professional with over five years of experience in the aerospace industry, specializing in product requirements, testing, digital transformation, and engineering management.
 :::
 
