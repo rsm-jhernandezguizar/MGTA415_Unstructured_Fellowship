@@ -222,5 +222,19 @@
     "title": "Final",
     "section": "Chatbot Pricing Strategy",
     "text": "Chatbot Pricing Strategy\n1. Pricing Strategy\n📌 Recommended Monthly Price Point: $10–$15 per DM (Pro-tier)\nTiered pricing is key to capturing different segments of your audience.\n🎯 Suggested Tiers:\nFree / Freemium Tier: Limited usage (e.g., X interactions/month), great for adoption.\n$9.99/month: Core features for casual DMs (auto-NPCs, rules lookup, encounter help).\n$14.99–19.99/month: Power-user features for dedicated DMs or streamers (session summaries, homebrew integration, campaign tracking, etc.).\nEnterprise/API licensing: White-labeled or integrated with Roll20 or other platforms.\n💡 Why $10–$15/month? That’s consistent with what DMs already spend monthly on Roll20 Plus/Pro, D&D Beyond subscriptions, and digital assets. They’re willing to pay for tools that:\n\nSave time\nEnhance creativity\nIncrease immersion and narrative flow\nReduce prep work\n\n\nDemo"
+  },
+  {
+    "objectID": "Final.html#server-costs",
+    "href": "Final.html#server-costs",
+    "title": "Final",
+    "section": "Server Costs",
+    "text": "Server Costs\n\n\n\n\n\n\n\n\n\n\n\n\nCategory\nItem\nDescription\nPhase\nOne-time\nMonthly\nVendor / Source\n\n\n\n\nHardware\nRTX-6000 Ada GPU\n48 GB GPU for inference\nMVP\n6800\n0\nNVIDIA RTX 6000 Ada – https://www.nvidia.com/en-us/design-visualization/rtx-6000/\n\n\nHardware\n1U CPU server\n64–128 GB RAM, NVMe\nMVP\n4000\n0\nABMX 1U Server – https://www.abmx.com/product-3438\n\n\nHardware\nFirewall + misc + install\nNetwork/security/peripherals\nMVP\n1000\n0\nCDW / Presidio / SHI (Firewall, cabling, install) – https://www.cdw.com/\n\n\nColocation\nRack space + power (0.3 kW)\nMonthly placement (est.)\nMVP\n0\n49\nQuoteColo (Irvine colocation) – https://www.quotecolo.com/colocation/us/california/irvine/\n\n\nOpex\nBandwidth\n1 Gbps port\nMVP\n0\n100\nBandwidth add-on (via colo provider QuoteColo) – https://www.quotecolo.com/\n\n\nOpex\nStatic IPs\nPublic IPs\nMVP\n0\n10\nStatic IPs (via colo provider QuoteColo) – https://www.quotecolo.com/\n\n\nOpex\nRemote-hands\nWhite-glove support\nMVP\n0\n300\nRemote hands “white-glove” (via colo provider QuoteColo) – https://www.quotecolo.com/\n\n\nOpex\nBackups (2 TB)\nRemote backups\nMVP\n0\n12\nBackups (object storage, Backblaze B2) – https://www.backblaze.com/b2/cloud-storage.html\n\n\nOpex\nMonitoring/logs\nBasic monitoring\nMVP\n0\n15\nMonitoring/logs (UptimeRobot, low-tier) – https://uptimerobot.com/\n\n\nTOTAL\nUpfront & Monthly\nSummary\n–\n11800\n486"
+  },
+  {
+    "objectID": "Final.html#chatbot-results",
+    "href": "Final.html#chatbot-results",
+    "title": "Final",
+    "section": "Chatbot Results",
+    "text": "Chatbot Results\n\n\n\nChatbot Output"
   }
 ]

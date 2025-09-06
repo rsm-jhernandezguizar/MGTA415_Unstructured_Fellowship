@@ -133,11 +133,30 @@ We scored the system across the dimensions below (1–5 scale), with short tests
 2. Design a new magical sword that has a drawback when used in the Shadowfell.
 3. A new cleric domain called the Domain of Stars has emerged. Describe its divine tenets and a unique channel divinity.
 
+## Chatbot Results
+
+![Chatbot Output](Chatbot Results 1.png)
+
 ## Chatbot Evaluation Graph
 
 ![Chatbot Evaluation Graph](Chatbot Evaluation Graph.png)
 
 ### Future Work
+
+## Server Costs
+
+Category|Item|Description|Phase|One-time|Monthly|Vendor / Source|Vendor / Source Alternative
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:
+Hardware|RTX-6000 Ada GPU|48 GB GPU for inference|MVP|6800|0|NVIDIA RTX 6000 Ada – https://www.nvidia.com/en-us/design-visualization/rtx-6000/|(Alt: Newegg) – https://www.newegg.com/p/N82E16814132103
+Hardware|1U CPU server|64–128 GB RAM, NVMe|MVP|4000|0|ABMX 1U Server – https://www.abmx.com/product-3438|(Alt: Supermicro) – https://store.supermicro.com/us_en/systems/rackmount/rackmount-1u.html
+Hardware|Firewall + misc + install|Network/security/peripherals|MVP|1000|0|CDW / Presidio / SHI (Firewall, cabling, install) – https://www.cdw.com/|
+Colocation|Rack space + power (0.3 kW)|Monthly placement (est.)|MVP|0|49|QuoteColo (Irvine colocation) – https://www.quotecolo.com/colocation/us/california/irvine/|
+Opex|Bandwidth|1 Gbps port|MVP|0|100|Bandwidth add-on (via colo provider QuoteColo) – https://www.quotecolo.com/|
+Opex|Static IPs|Public IPs|MVP|0|10|Static IPs (via colo provider QuoteColo) – https://www.quotecolo.com/|
+Opex|Remote-hands|White-glove support|MVP|0|300|Remote hands “white-glove” (via colo provider QuoteColo) – https://www.quotecolo.com/|
+Opex|Backups (2 TB)|Remote backups|MVP|0|12|Backups (object storage, Backblaze B2) – https://www.backblaze.com/b2/cloud-storage.html|
+Opex|Monitoring/logs|Basic monitoring|MVP|0|15|Monitoring/logs (UptimeRobot, low-tier) – https://uptimerobot.com/|
+TOTAL|Upfront & Monthly|Summary |–|11800|486||
 
 ## D&D Market Cap
 🧮 Step-by-Step Estimation Framework

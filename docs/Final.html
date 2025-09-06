@@ -138,10 +138,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#crewai-multiagent-orchestration" id="toc-crewai-multiagent-orchestration" class="nav-link" data-scroll-target="#crewai-multiagent-orchestration">CrewAI (multi‑agent orchestration)</a></li>
   </ul></li>
   <li><a href="#chatbot-evaluation-criteria" id="toc-chatbot-evaluation-criteria" class="nav-link" data-scroll-target="#chatbot-evaluation-criteria">Chatbot Evaluation Criteria</a></li>
+  <li><a href="#chatbot-results" id="toc-chatbot-results" class="nav-link" data-scroll-target="#chatbot-results">Chatbot Results</a></li>
   <li><a href="#chatbot-evaluation-graph" id="toc-chatbot-evaluation-graph" class="nav-link" data-scroll-target="#chatbot-evaluation-graph">Chatbot Evaluation Graph</a>
   <ul class="collapse">
   <li><a href="#future-work" id="toc-future-work" class="nav-link" data-scroll-target="#future-work">Future Work</a></li>
   </ul></li>
+  <li><a href="#server-costs" id="toc-server-costs" class="nav-link" data-scroll-target="#server-costs">Server Costs</a></li>
   <li><a href="#dd-market-cap" id="toc-dd-market-cap" class="nav-link" data-scroll-target="#dd-market-cap">D&amp;D Market Cap</a></li>
   <li><a href="#chatbot-pricing-strategy" id="toc-chatbot-pricing-strategy" class="nav-link" data-scroll-target="#chatbot-pricing-strategy">Chatbot Pricing Strategy</a>
   <ul class="collapse">
@@ -314,6 +316,15 @@ ul.task-list li input[type="checkbox"] {
 <li>A new cleric domain called the Domain of Stars has emerged. Describe its divine tenets and a unique channel divinity.</li>
 </ol>
 </section>
+<section id="chatbot-results" class="level2">
+<h2 class="anchored" data-anchor-id="chatbot-results">Chatbot Results</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Chatbot Results 1.png" class="img-fluid figure-img"></p>
+<figcaption>Chatbot Output</figcaption>
+</figure>
+</div>
+</section>
 <section id="chatbot-evaluation-graph" class="level2">
 <h2 class="anchored" data-anchor-id="chatbot-evaluation-graph">Chatbot Evaluation Graph</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -325,6 +336,123 @@ ul.task-list li input[type="checkbox"] {
 <section id="future-work" class="level3">
 <h3 class="anchored" data-anchor-id="future-work">Future Work</h3>
 </section>
+</section>
+<section id="server-costs" class="level2">
+<h2 class="anchored" data-anchor-id="server-costs">Server Costs</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Category</th>
+<th style="text-align: center;">Item</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Phase</th>
+<th style="text-align: center;">One-time</th>
+<th style="text-align: center;">Monthly</th>
+<th style="text-align: center;">Vendor / Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Hardware</td>
+<td style="text-align: center;">RTX-6000 Ada GPU</td>
+<td style="text-align: center;">48 GB GPU for inference</td>
+<td style="text-align: center;">MVP</td>
+<td style="text-align: center;">6800</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">NVIDIA RTX 6000 Ada – https://www.nvidia.com/en-us/design-visualization/rtx-6000/</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Hardware</td>
+<td style="text-align: center;">1U CPU server</td>
+<td style="text-align: center;">64–128 GB RAM, NVMe</td>
+<td style="text-align: center;">MVP</td>
+<td style="text-align: center;">4000</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">ABMX 1U Server – https://www.abmx.com/product-3438</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Hardware</td>
+<td style="text-align: center;">Firewall + misc + install</td>
+<td style="text-align: center;">Network/security/peripherals</td>
+<td style="text-align: center;">MVP</td>
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">CDW / Presidio / SHI (Firewall, cabling, install) – https://www.cdw.com/</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Colocation</td>
+<td style="text-align: center;">Rack space + power (0.3 kW)</td>
+<td style="text-align: center;">Monthly placement (est.)</td>
+<td style="text-align: center;">MVP</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">QuoteColo (Irvine colocation) – https://www.quotecolo.com/colocation/us/california/irvine/</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Opex</td>
+<td style="text-align: center;">Bandwidth</td>
+<td style="text-align: center;">1 Gbps port</td>
+<td style="text-align: center;">MVP</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">Bandwidth add-on (via colo provider QuoteColo) – https://www.quotecolo.com/</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Opex</td>
+<td style="text-align: center;">Static IPs</td>
+<td style="text-align: center;">Public IPs</td>
+<td style="text-align: center;">MVP</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">Static IPs (via colo provider QuoteColo) – https://www.quotecolo.com/</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Opex</td>
+<td style="text-align: center;">Remote-hands</td>
+<td style="text-align: center;">White-glove support</td>
+<td style="text-align: center;">MVP</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">300</td>
+<td style="text-align: center;">Remote hands “white-glove” (via colo provider QuoteColo) – https://www.quotecolo.com/</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Opex</td>
+<td style="text-align: center;">Backups (2 TB)</td>
+<td style="text-align: center;">Remote backups</td>
+<td style="text-align: center;">MVP</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">Backups (object storage, Backblaze B2) – https://www.backblaze.com/b2/cloud-storage.html</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Opex</td>
+<td style="text-align: center;">Monitoring/logs</td>
+<td style="text-align: center;">Basic monitoring</td>
+<td style="text-align: center;">MVP</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">Monitoring/logs (UptimeRobot, low-tier) – https://uptimerobot.com/</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TOTAL</td>
+<td style="text-align: center;">Upfront &amp; Monthly</td>
+<td style="text-align: center;">Summary</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">11800</td>
+<td style="text-align: center;">486</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="dd-market-cap" class="level2">
 <h2 class="anchored" data-anchor-id="dd-market-cap">D&amp;D Market Cap</h2>
