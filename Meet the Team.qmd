@@ -31,7 +31,7 @@ Higher education data leader and Senior Institutional Data Analyst at UC San Die
 ![Lowell Capobianco](images/lowell.jpeg){.rounded-circle .shadow style="width:160px;height:160px;object-fit:cover;"}
 **Lowell Capobianco**    
 <span class="text-muted small">Business Process Analyst at Northrop Grumman</span>  
-I am passionate about applying my engineering and military background to the field of business analytics.ent.
+I am passionate about applying my engineering and military background to the field of business analytics.
 :::
 
 ::: {.g-col-12 .g-col-sm-6 .g-col-lg-3 .text-center}
