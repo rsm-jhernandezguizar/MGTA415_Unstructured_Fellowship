@@ -28,7 +28,7 @@ Ask rules questions, roll dice, spawn NPCs, track combat, and even push tokens t
 
 The diagram below sketches the high‑level flow of data between components—in other words, who talks to whom when you ask the assistant anything you like. 🎲🚀
 
-![System architecture diagram](images/250726_Architecture.png){
+![System architecture diagram](images/250805_Architecture.png){
   fig-alt="High‑level system architecture for the D&D AI Assistant"
   fig-cap="Figure&nbsp;2. Behind‑the‑scenes: how the assistant pieces fit together."
   width=90%
