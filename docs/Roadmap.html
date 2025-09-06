@@ -180,6 +180,24 @@ This roadmap focuses on three practical upgrades: faster responses, more relevan
 <li><strong>Safeguards:</strong> Adjust chunk size/overlap and examples when accuracy drifts.</li>
 </ul>
 </section>
+<section id="prompt-boosting" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-boosting">🚀 Prompt Boosting</h3>
+<ul>
+<li><strong>Goal:</strong> Make the system more effective at understanding intent and prioritizing important queries.</li>
+<li><strong>What we’ll do:</strong>
+<ul>
+<li>Apply lightweight re-ranking of prompts (e.g., giving more weight to recent context or flagged keywords).<br>
+</li>
+<li>Boost relevance for queries tagged as “priority” or mapped to critical workflows.<br>
+</li>
+<li>Use example-driven tuning to improve consistency.<br>
+</li>
+</ul></li>
+<li><strong>Success looks like:</strong> Higher accuracy on priority use-cases; fewer clarifying questions; improved efficiency for complex prompts.<br>
+</li>
+<li><strong>Safeguards:</strong> Maintain a controlled list of boost rules; regularly audit to prevent overfitting or bias; log boosted vs.&nbsp;non-boosted outcomes for review.</li>
+</ul>
+</section>
 <section id="monitoring-visibility" class="level3">
 <h3 class="anchored" data-anchor-id="monitoring-visibility">📊 Monitoring &amp; Visibility</h3>
 <ul>
