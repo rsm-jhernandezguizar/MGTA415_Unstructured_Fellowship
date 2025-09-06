@@ -29,6 +29,15 @@ This roadmap focuses on three practical upgrades: faster responses, more relevan
 - **Success looks like:** Users find what they need on the first page; **thumbs-up rate** ≥ **70%** on sampled sessions; fewer re-asks within 30s.
 - **Safeguards:** Adjust chunk size/overlap and examples when accuracy drifts.
 
+### 🚀 Prompt Boosting
+- **Goal:** Make the system more effective at understanding intent and prioritizing important queries.
+- **What we’ll do:**  
+  - Apply lightweight re-ranking of prompts (e.g., giving more weight to recent context or flagged keywords).  
+  - Boost relevance for queries tagged as “priority” or mapped to critical workflows.  
+  - Use example-driven tuning to improve consistency.  
+- **Success looks like:** Higher accuracy on priority use-cases; fewer clarifying questions; improved efficiency for complex prompts.  
+- **Safeguards:** Maintain a controlled list of boost rules; regularly audit to prevent overfitting or bias; log boosted vs. non-boosted outcomes for review.
+
 ### 📊 Monitoring & Visibility
 - **Goal:** Detect issues before users feel them and learn from feedback.
 - **What we’ll track (health):**  
